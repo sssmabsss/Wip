@@ -8,7 +8,7 @@ public class shoot : MonoBehaviour {
 
 
     public float speed;
-    public Vector3 bulletdistance;
+
 
 
 
@@ -30,5 +30,34 @@ public class shoot : MonoBehaviour {
 
         gameObject.SetActive(false);
         gameObject.transform.localPosition = new Vector3(0, 0, 0);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            other.gameObject.GetComponent<plyer>().takingdamage();
+
+            reset();
+
+            
+        }
+
+        if (other.tag == "Land")
+        {
+            reset();
+        }
+
+        if (other.tag == "Box")
+        {
+            if (other.gameObject.GetComponent<BoxPropierties>().spritecolor == 0)
+            {
+                other.gameObject.GetComponent<BoxPropierties>().respawn();
+            }
+            else
+            {
+                reset();
+            }
+        }
     }
 }

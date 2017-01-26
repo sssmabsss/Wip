@@ -25,6 +25,11 @@ public class BoxPropierties : MonoBehaviour {
     public Sprite amarilla;
     public Sprite roja;
 
+    [Header("initial values")]
+    public Vector3 InitialPosition;
+    public int InitialMaterial;
+
+
 
     // Use this for initialization
     void Start() {
@@ -32,6 +37,9 @@ public class BoxPropierties : MonoBehaviour {
         isTouchingWall = false;
         sp  = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+
+        InitialPosition = gameObject.transform.position;
+        InitialMaterial = spritecolor;
 
     }
 
@@ -70,5 +78,13 @@ public class BoxPropierties : MonoBehaviour {
                 print("Material por defecto");
                 break;
         }
+    }
+
+    public void respawn()
+    {
+
+        gameObject.transform.position = InitialPosition;
+        spritecolor = InitialMaterial;
+
     }
 }

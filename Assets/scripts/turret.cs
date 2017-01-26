@@ -36,10 +36,12 @@ public class turret : MonoBehaviour {
 
         if (distance < shootRange)
             {
-            bullets[index].SetActive(true);
+
+
 
             if (framesCounter >= shootInterval)
             {
+                bullets[index].SetActive(true);
                 index++;
                 framesCounter = 0;
             }
@@ -47,6 +49,21 @@ public class turret : MonoBehaviour {
             if (index >= bullets.Length) index = 0;
         }
 
+        if (framesCounter >= 5) restart();
+
+    }
+
+    public void restart()
+    {
+        for (int i = 0; i < bullets.Length; i++)
+        {
+            bullets[i].SetActive(false);
+
+        }
+
+        index = 0;
+
+        framesCounter = 0;
     }
 
 }

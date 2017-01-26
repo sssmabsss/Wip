@@ -226,11 +226,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4664491140241044, guid: 50f9a7915fbd7ab40a686f494ac9cb14, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.13
       objectReference: {fileID: 0}
     - target: {fileID: 4664491140241044, guid: 50f9a7915fbd7ab40a686f494ac9cb14, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.77
       objectReference: {fileID: 0}
     - target: {fileID: 4664491140241044, guid: 50f9a7915fbd7ab40a686f494ac9cb14, type: 2}
       propertyPath: m_LocalPosition.z
@@ -265,6 +265,11 @@ Prefab:
         type: 2}
       propertyPath: groundMask.m_Bits
       value: 1536
+      objectReference: {fileID: 0}
+    - target: {fileID: 114409253102865950, guid: 50f9a7915fbd7ab40a686f494ac9cb14,
+        type: 2}
+      propertyPath: life
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 50f9a7915fbd7ab40a686f494ac9cb14, type: 2}
@@ -652,7 +657,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012282747770, guid: 794c1229788f73c4b92fd2ccc03f24c2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 4.64
+      value: -2.36
       objectReference: {fileID: 0}
     - target: {fileID: 4000012282747770, guid: 794c1229788f73c4b92fd2ccc03f24c2, type: 2}
       propertyPath: m_LocalPosition.y
@@ -702,6 +707,11 @@ Prefab:
         type: 2}
       propertyPath: m_Color.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012286880112, guid: 794c1229788f73c4b92fd2ccc03f24c2,
+        type: 2}
+      propertyPath: spritecolor
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 54000010191051658, guid: 794c1229788f73c4b92fd2ccc03f24c2, type: 2}

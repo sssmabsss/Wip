@@ -48,6 +48,12 @@ public class plyer : MonoBehaviour
     public GameObject objectToChange;
     public int sprite;
 
+    [Header("life")]
+    public int life;
+
+    [Header("Checkpoint")]
+    public Vector3 lastcheckpoint;
+
 
 
 
@@ -57,7 +63,8 @@ public class plyer : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         facingRight = true;
-
+        lastcheckpoint = gameObject.transform.position;
+        life = 3;
     }
 
     void FixedUpdate()
@@ -151,6 +158,7 @@ public class plyer : MonoBehaviour
         MovementUpdate();
         rb.velocity = new Vector2(speed * move, rb.velocity.y);
 
+        //Jump logic
 
         if(Input.GetKeyDown("up"))
         {
@@ -161,6 +169,8 @@ public class plyer : MonoBehaviour
             }
         }
 
+        //pushing logic
+
         if (Input.GetKeyDown("space") && isTouchingObject) pushing = !pushing;
 
         if (pushing)
@@ -168,10 +178,14 @@ public class plyer : MonoBehaviour
             empujar();
         }
 
+        //flip logic
+
         if (facingRight && move < 0 && !pushing) flip();
         else if (!facingRight && move > 0 && !pushing) flip();
 
+        //restart logic
 
+        if (life <= 0) restardCheckpoint();
 
     }
 
@@ -293,6 +307,17 @@ public class plyer : MonoBehaviour
         }
         else objectToChange = null;
 
+    }
+
+    public void takingdamage()
+    {
+        life -= 1;
+    }
+
+    public void restardCheckpoint()
+    {
+        gameObject.transform.position = lastcheckpoint;
+        life = 3;
     }
 
 
