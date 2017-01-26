@@ -9,7 +9,7 @@ public class turret : MonoBehaviour {
     public float framesCounter;
     private int index = 0;
     public Vector3 direction;
-    public float speed;
+    public Vector2 shootspeed;
     public float shootInterval;
     public Transform target;
     public float distance;
@@ -24,18 +24,11 @@ public class turret : MonoBehaviour {
             bullets[i].SetActive(false);
 
         }
-
-
     }
 
     // Update is called once per frame
-    void Update () {
+    void FixedUpdate () {
 
-
-        for (int i = 0; i < bullets.Length; i++)
-        {
-            if (bullets[i].activeSelf) bullets[i].transform.position += direction * speed;
-        }
 
         distance = Vector3.Distance(gameObject.transform.position, target.transform.position);
 
@@ -54,22 +47,6 @@ public class turret : MonoBehaviour {
             if (index >= bullets.Length) index = 0;
         }
 
-        for (int i = 0; i < bullets.Length; i++)
-        {
-
-            if (bullets[i].transform.position.x <= bulletdistance) reset();
-        }
-
     }
 
-    public void reset()
-    {
-        for (int i = 0; i < bullets.Length; i++)
-        {
-
-            bullets[i].SetActive(false);
-            bullets[i].transform.localPosition = new Vector3(0,0,0);
-
-        }
-    }
 }

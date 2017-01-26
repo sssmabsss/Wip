@@ -73,7 +73,7 @@ public class plyer : MonoBehaviour
         {
             isGrounded = true;
         }
-        else if (hitcolliderGround = null)
+        else 
         {
             isGrounded = false;
         }
@@ -96,7 +96,7 @@ public class plyer : MonoBehaviour
                     TouchingObject = hitcolliderWall.gameObject;
                 }
         }
-        else if (hitcolliderWall = null)
+        else 
         {
             isTouchingWall = false;
             isTouchingObject = false;
@@ -152,9 +152,9 @@ public class plyer : MonoBehaviour
         rb.velocity = new Vector2(speed * move, rb.velocity.y);
 
 
-        if (Input.GetKeyDown("up"))
+        if(Input.GetKeyDown("up"))
         {
-            if (isGrounded)
+            if(isGrounded)
             {
                 rb.velocity = new Vector2(rb.velocity.x, 0);
                 rb.AddForce(new Vector2(0, jumpforce), ForceMode2D.Impulse);
