@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 212419788556364884}
   - component: {fileID: 61783843587364534}
   - component: {fileID: 114228319492793450}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1409195213215158}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 9.68, y: -1.49, z: 0}
+  m_LocalPosition: {x: 29.18, y: -1.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4202477598366738}
@@ -365,7 +365,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
-  bulletdistance: {x: 0, y: 0, z: 0}
 --- !u!114 &114228319492793450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -389,7 +388,7 @@ MonoBehaviour:
   target: {fileID: 0}
   distance: 0
   bulletdistance: -15
-  shootRange: 8
+  shootRange: 4
 --- !u!114 &114594416574195964
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -402,7 +401,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
-  bulletdistance: {x: 0, y: 0, z: 0}
 --- !u!114 &114664232562559088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -415,7 +413,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
-  bulletdistance: {x: 0, y: 0, z: 0}
 --- !u!114 &114808022248464774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -428,7 +425,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
-  bulletdistance: {x: 0, y: 0, z: 0}
 --- !u!212 &212179105655645410
 SpriteRenderer:
   m_ObjectHideFlags: 1

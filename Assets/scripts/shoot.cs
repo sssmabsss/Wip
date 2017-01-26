@@ -39,8 +39,6 @@ public class shoot : MonoBehaviour {
             other.gameObject.GetComponent<plyer>().takingdamage();
 
             reset();
-
-            
         }
 
         if (other.tag == "Land")

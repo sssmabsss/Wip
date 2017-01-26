@@ -59,23 +59,23 @@ public class BoxPropierties : MonoBehaviour {
         switch (spritecolor)
         {
             case 0:
-                print("Material Ligero");
+               // print("Material Ligero");
                 sp.sprite = verde;
                 rb.mass = 10;
 
                 break;
             case 1:
-                print("material mediano");
+              //  print("material mediano");
                 sp.sprite = amarilla;
                 rb.mass = 30;
                 break;
             case 2:
-                print("Material Pesado");
+              //  print("Material Pesado");
                 sp.sprite = roja;
                 rb.mass = 100;
                 break;
             default:
-                print("Material por defecto");
+              //  print("Material por defecto");
                 break;
         }
     }

@@ -50,6 +50,7 @@ public class plyer : MonoBehaviour
 
     [Header("life")]
     public int life;
+    public int hitforce;
 
     [Header("Checkpoint")]
     public Vector3 lastcheckpoint;
@@ -312,6 +313,9 @@ public class plyer : MonoBehaviour
     public void takingdamage()
     {
         life -= 1;
+        if (facingRight) gameObject.transform.position = new Vector3(gameObject.transform.position.x - 1, gameObject.transform.position.y + 1, 0);
+        else gameObject.transform.position = new Vector3(gameObject.transform.position.x + 1, gameObject.transform.position.y + 1, 0);
+       
     }
 
     public void restardCheckpoint()
