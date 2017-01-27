@@ -51,6 +51,9 @@ public class plyer : MonoBehaviour
     [Header("life")]
     public int life;
     public int hitforce;
+    public bool invencibility;
+    public int invencibilityTime;
+    public float framesCounter;
 
     [Header("Checkpoint")]
     public Vector3 lastcheckpoint;
@@ -66,6 +69,7 @@ public class plyer : MonoBehaviour
         facingRight = true;
         lastcheckpoint = gameObject.transform.position;
         life = 3;
+        invencibility = false;
     }
 
     void FixedUpdate()
@@ -188,7 +192,21 @@ public class plyer : MonoBehaviour
 
         if (life <= 0) restardCheckpoint();
 
-    }
+        //invencibility logic
+
+        if (invencibility)
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            framesCounter += Time.deltaTime;
+            if (framesCounter >= invencibilityTime)
+            {
+                invencibility = false;
+                framesCounter = 0;
+            }
+        }
+        else gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+
+        }
 
     void OnDrawGizmos()
     {
@@ -312,10 +330,11 @@ public class plyer : MonoBehaviour
 
     public void takingdamage()
     {
-        life -= 1;
-        if (facingRight) gameObject.transform.position = new Vector3(gameObject.transform.position.x - 1, gameObject.transform.position.y + 1, 0);
-        else gameObject.transform.position = new Vector3(gameObject.transform.position.x + 1, gameObject.transform.position.y + 1, 0);
-       
+        if (!invencibility)
+        {
+            life -= 1;
+            if (life > 0) invencibility = true;
+        }
     }
 
     public void restardCheckpoint()

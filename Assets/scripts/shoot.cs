@@ -51,6 +51,7 @@ public class shoot : MonoBehaviour {
             if (other.gameObject.GetComponent<BoxPropierties>().spritecolor == 0)
             {
                 other.gameObject.GetComponent<BoxPropierties>().respawn();
+                reset();
             }
             else
             {
