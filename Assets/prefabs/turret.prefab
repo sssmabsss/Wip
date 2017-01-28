@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 50640286704692848}
   - component: {fileID: 114808022248464774}
   - component: {fileID: 61816467526678872}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: bullet_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +388,7 @@ MonoBehaviour:
   target: {fileID: 0}
   distance: 0
   bulletdistance: -15
-  shootRange: 4
+  shootRange: 8
 --- !u!114 &114594416574195964
 MonoBehaviour:
   m_ObjectHideFlags: 1

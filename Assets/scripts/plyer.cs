@@ -35,6 +35,7 @@ public class plyer : MonoBehaviour
     public int weight;
     public int power;
     public bool pushing;
+    public int forcedown;
 
     [Header("Change Material")]
     public Vector3 mousePosition;
@@ -253,7 +254,7 @@ public class plyer : MonoBehaviour
 
     void coger()
     {
-        TouchingObject.GetComponent<BoxPropierties>().rb.velocity = Vector2.zero;
+        TouchingObject.GetComponent<BoxPropierties>().rb.velocity = new Vector2(0, forcedown); ;
 
         if (TouchingObject.GetComponent<BoxPropierties>().spritecolor < 1 && pushing)
         {

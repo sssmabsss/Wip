@@ -11,6 +11,7 @@ public class BoxPropierties : MonoBehaviour {
 
     [Header("weights")]
     public Rigidbody2D rb;
+    public int forcedown;
 
     [Header("Sprites")]
     private SpriteRenderer sp;
@@ -34,6 +35,7 @@ public class BoxPropierties : MonoBehaviour {
 
         InitialPosition = gameObject.transform.position;
         InitialMaterial = spritecolor;
+        rb.velocity = new Vector2(0,forcedown);
 
     }
 

@@ -41,12 +41,14 @@ public class shoot : MonoBehaviour {
             reset();
         }
 
-        if (other.tag == "Land")
+        else if (other.tag == "Land")
         {
+            Debug.Log("toco suelo");
+
             reset();
         }
 
-        if (other.tag == "Box")
+        else if (other.tag == "Box")
         {
             if (other.gameObject.GetComponent<BoxPropierties>().spritecolor == 0)
             {

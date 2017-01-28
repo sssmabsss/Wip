@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50152980343424714}
   - component: {fileID: 114570868883666274}
   - component: {fileID: 61844236357288560}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: bullet_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1241981041564806}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1.0000002, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -89,7 +89,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
-  bulletdistance: {x: 0, y: 0, z: 0}
 --- !u!212 &212462835355178238
 SpriteRenderer:
   m_ObjectHideFlags: 1
