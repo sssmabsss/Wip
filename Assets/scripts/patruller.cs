@@ -61,6 +61,7 @@ public class patruller : MonoBehaviour {
 
         if (other.tag == "Box")
         {
+
             speed *= -1;
         }
 

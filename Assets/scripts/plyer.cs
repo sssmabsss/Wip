@@ -178,10 +178,14 @@ public class plyer : MonoBehaviour
 
         if (Input.GetKeyDown("space") && isTouchingObject) pushing = !pushing;
 
+
+
         if (pushing)
-        { 
-            empujar();
+        {
+            coger();
+
         }
+
 
         //flip logic
 
@@ -247,21 +251,22 @@ public class plyer : MonoBehaviour
        
     }
 
-    void empujar()
+    void coger()
     {
-        Debug.Log("empujo");
+        TouchingObject.GetComponent<BoxPropierties>().rb.velocity = Vector2.zero;
 
-        if (TouchingObject.GetComponent<BoxPropierties>().spritecolor<1 && pushing)
+        if (TouchingObject.GetComponent<BoxPropierties>().spritecolor < 1 && pushing)
         {
-                if (facingRight)
-                {
-                    TouchingObject.transform.position = new Vector3(gameObject.transform.position.x + 1, gameObject.transform.position.y, gameObject.transform.position.z);
-                }
-                else
-                {
-                    TouchingObject.transform.position = new Vector3(gameObject.transform.position.x - 1, gameObject.transform.position.y, gameObject.transform.position.z);
-                }
+            if (facingRight)
+            {
+                TouchingObject.transform.position = new Vector3(gameObject.transform.position.x + 1.1f, gameObject.transform.position.y, gameObject.transform.position.z);
+            }
+            else
+            {
+                TouchingObject.transform.position = new Vector3(gameObject.transform.position.x - 1.1f, gameObject.transform.position.y, gameObject.transform.position.z);
+            }
         }
+        else pushing = !pushing;
     }
 
     void aimObject()

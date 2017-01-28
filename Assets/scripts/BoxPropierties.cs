@@ -7,13 +7,7 @@ public class BoxPropierties : MonoBehaviour {
     [Header("forces")]
     public int weight;
     public bool isTouchingWall;
-
-
-    [Header("Checkers")]
-    public Transform wallChecker;
-    public LayerMask wallMask;
-    public Vector2 wallSize;
-    public Collider2D hitcolliderObject;
+    public Vector2 rbvelocity;
 
     [Header("weights")]
     public Rigidbody2D rb;
@@ -46,12 +40,7 @@ public class BoxPropierties : MonoBehaviour {
     void Update() {
 
         changeMaterial();
-    }
-
-    void OnDrawGizmos() {
-
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(wallChecker.position, wallSize);
+        rbvelocity = rb.velocity;
     }
 
     void changeMaterial()
