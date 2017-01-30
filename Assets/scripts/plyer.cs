@@ -166,7 +166,7 @@ public class plyer : MonoBehaviour
 
         //Jump logic
 
-        if(Input.GetKeyDown("up"))
+        if(Input.GetKeyDown("up") || Input.GetKeyDown("w"))
         {
             if(isGrounded)
             {
