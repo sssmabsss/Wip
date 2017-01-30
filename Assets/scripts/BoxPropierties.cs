@@ -7,16 +7,11 @@ public class BoxPropierties : MonoBehaviour {
     [Header("forces")]
     public int weight;
     public bool isTouchingWall;
-
-
-    [Header("Checkers")]
-    public Transform wallChecker;
-    public LayerMask wallMask;
-    public Vector2 wallSize;
-    public Collider2D hitcolliderObject;
+    public Vector2 rbvelocity;
 
     [Header("weights")]
     public Rigidbody2D rb;
+    public int forcedown;
 
     [Header("Sprites")]
     private SpriteRenderer sp;
@@ -24,6 +19,11 @@ public class BoxPropierties : MonoBehaviour {
     public Sprite verde;
     public Sprite amarilla;
     public Sprite roja;
+
+    [Header("initial values")]
+    public Vector3 InitialPosition;
+    public int InitialMaterial;
+
 
 
     // Use this for initialization
@@ -33,17 +33,16 @@ public class BoxPropierties : MonoBehaviour {
         sp  = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
 
+        InitialPosition = gameObject.transform.position;
+        InitialMaterial = spritecolor;
+        rb.velocity = new Vector2(0,forcedown);
+
     }
 
     void Update() {
 
         changeMaterial();
-    }
-
-    void OnDrawGizmos() {
-
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(wallChecker.position, wallSize);
+        rbvelocity = rb.velocity;
     }
 
     void changeMaterial()
@@ -51,24 +50,32 @@ public class BoxPropierties : MonoBehaviour {
         switch (spritecolor)
         {
             case 0:
-                print("Material Ligero");
+               // print("Material Ligero");
                 sp.sprite = verde;
                 rb.mass = 10;
 
                 break;
             case 1:
-                print("material mediano");
+              //  print("material mediano");
                 sp.sprite = amarilla;
                 rb.mass = 30;
                 break;
             case 2:
-                print("Material Pesado");
+              //  print("Material Pesado");
                 sp.sprite = roja;
                 rb.mass = 100;
                 break;
             default:
-                print("Material por defecto");
+              //  print("Material por defecto");
                 break;
         }
+    }
+
+    public void respawn()
+    {
+
+        gameObject.transform.position = InitialPosition;
+        spritecolor = InitialMaterial;
+
     }
 }

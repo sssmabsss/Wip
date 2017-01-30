@@ -35,6 +35,7 @@ public class plyer : MonoBehaviour
     public int weight;
     public int power;
     public bool pushing;
+    public int forcedown;
 
     [Header("Change Material")]
     public Vector3 mousePosition;
@@ -48,6 +49,16 @@ public class plyer : MonoBehaviour
     public GameObject objectToChange;
     public int sprite;
 
+    [Header("life")]
+    public int life;
+    public int hitforce;
+    public bool invencibility;
+    public int invencibilityTime;
+    public float framesCounter;
+
+    [Header("Checkpoint")]
+    public Vector3 lastcheckpoint;
+
 
 
 
@@ -57,7 +68,9 @@ public class plyer : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         facingRight = true;
-
+        lastcheckpoint = gameObject.transform.position;
+        life = 3;
+        invencibility = false;
     }
 
     void FixedUpdate()
@@ -73,7 +86,7 @@ public class plyer : MonoBehaviour
         {
             isGrounded = true;
         }
-        else if (hitcolliderGround = null)
+        else 
         {
             isGrounded = false;
         }
@@ -96,7 +109,7 @@ public class plyer : MonoBehaviour
                     TouchingObject = hitcolliderWall.gameObject;
                 }
         }
-        else if (hitcolliderWall = null)
+        else 
         {
             isTouchingWall = false;
             isTouchingObject = false;
@@ -151,29 +164,54 @@ public class plyer : MonoBehaviour
         MovementUpdate();
         rb.velocity = new Vector2(speed * move, rb.velocity.y);
 
+        //Jump logic
 
-        if (Input.GetKeyDown("up"))
+        if(Input.GetKeyDown("up"))
         {
-            if (isGrounded)
+            if(isGrounded)
             {
                 rb.velocity = new Vector2(rb.velocity.x, 0);
                 rb.AddForce(new Vector2(0, jumpforce), ForceMode2D.Impulse);
             }
         }
 
+        //pushing logic
+
         if (Input.GetKeyDown("space") && isTouchingObject) pushing = !pushing;
 
+
+
         if (pushing)
-        { 
-            empujar();
+        {
+            coger();
+
         }
+
+
+        //flip logic
 
         if (facingRight && move < 0 && !pushing) flip();
         else if (!facingRight && move > 0 && !pushing) flip();
 
+        //restart logic
 
+        if (life <= 0) restardCheckpoint();
 
-    }
+        //invencibility logic
+
+        if (invencibility)
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            framesCounter += Time.deltaTime;
+            if (framesCounter >= invencibilityTime)
+            {
+                invencibility = false;
+                framesCounter = 0;
+            }
+        }
+        else gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+
+        }
 
     void OnDrawGizmos()
     {
@@ -214,21 +252,22 @@ public class plyer : MonoBehaviour
        
     }
 
-    void empujar()
+    void coger()
     {
-        Debug.Log("empujo");
+        TouchingObject.GetComponent<BoxPropierties>().rb.velocity = new Vector2(0, forcedown); ;
 
-        if (TouchingObject.GetComponent<BoxPropierties>().spritecolor<1 && pushing)
+        if (TouchingObject.GetComponent<BoxPropierties>().spritecolor < 1 && pushing)
         {
-                if (facingRight)
-                {
-                    TouchingObject.transform.position = new Vector3(gameObject.transform.position.x + 1, gameObject.transform.position.y, gameObject.transform.position.z);
-                }
-                else
-                {
-                    TouchingObject.transform.position = new Vector3(gameObject.transform.position.x - 1, gameObject.transform.position.y, gameObject.transform.position.z);
-                }
+            if (facingRight)
+            {
+                TouchingObject.transform.position = new Vector3(gameObject.transform.position.x + 1.1f, gameObject.transform.position.y, gameObject.transform.position.z);
+            }
+            else
+            {
+                TouchingObject.transform.position = new Vector3(gameObject.transform.position.x - 1.1f, gameObject.transform.position.y, gameObject.transform.position.z);
+            }
         }
+        else pushing = !pushing;
     }
 
     void aimObject()
@@ -293,6 +332,21 @@ public class plyer : MonoBehaviour
         }
         else objectToChange = null;
 
+    }
+
+    public void takingdamage()
+    {
+        if (!invencibility)
+        {
+            life -= 1;
+            if (life > 0) invencibility = true;
+        }
+    }
+
+    public void restardCheckpoint()
+    {
+        gameObject.transform.position = lastcheckpoint;
+        life = 3;
     }
 
 

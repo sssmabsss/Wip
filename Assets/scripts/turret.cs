@@ -6,10 +6,15 @@ public class turret : MonoBehaviour {
 
 
     public GameObject[] bullets;
-    public int cadence;
+    public float framesCounter;
     private int index = 0;
     public Vector3 direction;
-    public int speed;
+    public Vector2 shootspeed;
+    public float shootInterval;
+    public Transform target;
+    public float distance;
+    public int bulletdistance;
+    public float shootRange;
 
     // Use this for initialization
     void Start () {
@@ -19,34 +24,46 @@ public class turret : MonoBehaviour {
             bullets[i].SetActive(false);
 
         }
-
-
     }
 
     // Update is called once per frame
-    void Update () {
-
-        for (int i = 0; i < bullets.Length; i++)
-        {
-            if (bullets[i].activeSelf)
-            bullets[i].transform.position += direction * (speed * Time.deltaTime);
-        }
+    void FixedUpdate () {
 
 
-        if (Input.GetKeyDown("space"))
-        {
-            bullets[index].SetActive(true);
-            index++;
+        distance = Vector3.Distance(gameObject.transform.position, target.transform.position);
+
+        framesCounter += Time.deltaTime;
+
+        if (distance < shootRange)
+            {
+
+
+
+            if (framesCounter >= shootInterval)
+            {
+                bullets[index].SetActive(true);
+                index++;
+                framesCounter = 0;
+            }
 
             if (index >= bullets.Length) index = 0;
         }
 
+        if (framesCounter >= 5) restart();
 
     }
 
-
-    void OnTriggerEnter(Collider other)
+    public void restart()
     {
-        other.gameObject.SetActive(false);
+        for (int i = 0; i < bullets.Length; i++)
+        {
+            bullets[i].SetActive(false);
+
+        }
+
+        index = 0;
+
+        framesCounter = 0;
     }
+
 }
