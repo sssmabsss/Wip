@@ -8,8 +8,6 @@ public class Material_propierties : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-       // material = "Light";
 	}
 	
 	// Update is called once per frame

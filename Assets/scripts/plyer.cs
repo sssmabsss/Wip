@@ -48,6 +48,8 @@ public class plyer : MonoBehaviour
     private Vector3 dir;
     public GameObject objectToChange;
     public int sprite;
+    public float getcoldown;
+    public float setcoldown;
 
     [Header("life")]
     public int life;
@@ -58,6 +60,9 @@ public class plyer : MonoBehaviour
 
     [Header("Checkpoint")]
     public Vector3 lastcheckpoint;
+
+    [Header("particles")]
+    public GameObject lighting_particle;
 
 
 
@@ -120,6 +125,10 @@ public class plyer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        framesCounter += Time.deltaTime;
+
+
         //for aiming with the mouse
 
         mousePosition = Input.mousePosition;
@@ -150,6 +159,9 @@ public class plyer : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
+
+            
+
             aimObject();
 
         }
@@ -201,6 +213,7 @@ public class plyer : MonoBehaviour
 
         if (invencibility)
         {
+            framesCounter = 0;
             gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             framesCounter += Time.deltaTime;
             if (framesCounter >= invencibilityTime)
@@ -272,10 +285,11 @@ public class plyer : MonoBehaviour
 
     void aimObject()
     {
-
+        framesCounter = 0;
         
-        aimhit = Physics2D.Linecast(gameObject.transform.position + dir, mousePosition2D, raymask);
 
+       aimhit = Physics2D.Linecast(gameObject.transform.position + dir, mousePosition2D, raymask);
+        
 
         if (aimhit)
         {
@@ -289,8 +303,35 @@ public class plyer : MonoBehaviour
 
         if (rayhit.tag == "Material")
         {
-            saveMaterial = rayhit;
-            print("he tocado un materiaL");
+            /*
+            //framesCounter += Time.deltaTime;
+
+            if (rayhit.GetComponent<Material_propierties>().material == "Light")
+            {
+                lighting_particle.GetComponent<lightning>().getWood();
+            }
+
+            else if (rayhit.GetComponent<Material_propierties>().material == "Light")
+            {
+                lighting_particle.GetComponent<lightning>().getStone();
+            }
+
+            else if (rayhit.GetComponent<Material_propierties>().material == "Light")
+            {
+                lighting_particle.GetComponent<lightning>().getMetal();
+            }
+            */
+
+
+            if (Input.GetMouseButtonDown(1))
+                {
+                if (framesCounter >= getcoldown)
+                {
+                    saveMaterial = rayhit;
+                    print("he tocado un materiaL");
+                    framesCounter = 0;
+                }
+            }
         }
 
     }

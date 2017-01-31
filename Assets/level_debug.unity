@@ -683,6 +683,21 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114409253102865950, guid: 50f9a7915fbd7ab40a686f494ac9cb14,
+        type: 2}
+      propertyPath: lighting
+      value: 
+      objectReference: {fileID: 1823418183}
+    - target: {fileID: 114409253102865950, guid: 50f9a7915fbd7ab40a686f494ac9cb14,
+        type: 2}
+      propertyPath: lighting_particle
+      value: 
+      objectReference: {fileID: 1823418183}
+    - target: {fileID: 114409253102865950, guid: 50f9a7915fbd7ab40a686f494ac9cb14,
+        type: 2}
+      propertyPath: getcoldown
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 50f9a7915fbd7ab40a686f494ac9cb14, type: 2}
   m_IsPrefabParent: 0
@@ -863,6 +878,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88f80dcd94b44f247bb8b17668432027, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1823418183 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1512821100160684, guid: bb3e545d8eb15364c9620c1459705da6,
+    type: 2}
+  m_PrefabInternal: {fileID: 178747820}
 --- !u!1001 &1862087164
 Prefab:
   m_ObjectHideFlags: 0

@@ -34,7 +34,7 @@ public class lightning : MonoBehaviour {
         this.transform.rotation = Quaternion.Euler(0, 0, AngleDeg);
     }
 
-    void getWood()
+  public  void getWood()
     {
        var m = ps.main;
 
@@ -42,7 +42,7 @@ public class lightning : MonoBehaviour {
         m.startColor = woodColor;
     }
 
-    void getStone()
+    public void getStone()
     {
         var m = ps.main;
 
@@ -50,7 +50,7 @@ public class lightning : MonoBehaviour {
         m.startColor = woodColor;
     }
 
-    void getMetal()
+    public void getMetal()
     {
         var m = ps.main;
 
@@ -58,7 +58,7 @@ public class lightning : MonoBehaviour {
         m.startColor = woodColor;
     }
 
-    void setWood()
+    public void setWood()
     {
         var m = ps.main;
 
@@ -66,7 +66,7 @@ public class lightning : MonoBehaviour {
         m.startColor = woodColor;
     }
 
-    void setStone()
+    public void setStone()
     {
         var m = ps.main;
 
@@ -74,7 +74,7 @@ public class lightning : MonoBehaviour {
         m.startColor = woodColor;
     }
 
-    void setMetal()
+    public void setMetal()
     {
         var m = ps.main;
 
