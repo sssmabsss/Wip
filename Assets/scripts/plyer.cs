@@ -126,9 +126,6 @@ public class plyer : MonoBehaviour
     void Update()
     {
 
-        framesCounter += Time.deltaTime;
-
-
         //for aiming with the mouse
 
         mousePosition = Input.mousePosition;
@@ -157,14 +154,12 @@ public class plyer : MonoBehaviour
 
         //aiming logic
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButton(1))
         {
-
-            
-
             aimObject();
 
         }
+        else if (Input.GetMouseButtonUp(1)) framesCounter = 0;
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -285,53 +280,35 @@ public class plyer : MonoBehaviour
 
     void aimObject()
     {
-        framesCounter = 0;
-        
 
-       aimhit = Physics2D.Linecast(gameObject.transform.position + dir, mousePosition2D, raymask);
-        
+
+        aimhit = Physics2D.Linecast(gameObject.transform.position + dir, mousePosition2D, raymask);
+
 
         if (aimhit)
         {
             rayhit = aimhit.transform.gameObject;
             print("he tocado algo");
+            framesCounter += Time.deltaTime;
         }
-        else rayhit = null;
+        else
+        {
+            rayhit = null;
+            framesCounter = 0;
+        }
 
 
             // GetComponentInChildren<TextMesh>().text = hit.transform.gameObject.name;
 
         if (rayhit.tag == "Material")
         {
-            /*
-            //framesCounter += Time.deltaTime;
-
-            if (rayhit.GetComponent<Material_propierties>().material == "Light")
-            {
-                lighting_particle.GetComponent<lightning>().getWood();
-            }
-
-            else if (rayhit.GetComponent<Material_propierties>().material == "Light")
-            {
-                lighting_particle.GetComponent<lightning>().getStone();
-            }
-
-            else if (rayhit.GetComponent<Material_propierties>().material == "Light")
-            {
-                lighting_particle.GetComponent<lightning>().getMetal();
-            }
-            */
-
-
-            if (Input.GetMouseButtonDown(1))
-                {
+            lighting_particle.GetComponent<ParticleSystem>().Play();
                 if (framesCounter >= getcoldown)
                 {
                     saveMaterial = rayhit;
                     print("he tocado un materiaL");
                     framesCounter = 0;
                 }
-            }
         }
 
     }
