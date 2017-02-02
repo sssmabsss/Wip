@@ -57,6 +57,7 @@ public class plyer : MonoBehaviour
     public bool invencibility;
     public int invencibilityTime;
     public float framesCounter;
+    public float framesCounterhit;
 
     [Header("Checkpoint")]
     public Vector3 lastcheckpoint;
@@ -161,10 +162,11 @@ public class plyer : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(1)) framesCounter = 0;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             changeMaterial();
         }
+        else if (Input.GetMouseButtonUp(1)) framesCounter = 0;
 
         //movement logic
 
@@ -208,7 +210,7 @@ public class plyer : MonoBehaviour
 
         if (invencibility)
         {
-            framesCounter = 0;
+            framesCounterhit = 0;
             gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             framesCounter += Time.deltaTime;
             if (framesCounter >= invencibilityTime)
@@ -302,7 +304,7 @@ public class plyer : MonoBehaviour
 
         if (rayhit.tag == "Material")
         {
-            lighting_particle.GetComponent<ParticleSystem>().Play();
+           // lighting_particle.GetComponent<ParticleSystem>().Play();
                 if (framesCounter >= getcoldown)
                 {
                     saveMaterial = rayhit;
@@ -324,8 +326,9 @@ public class plyer : MonoBehaviour
         {
 
             objectToChange = changehit.transform.gameObject;
+            framesCounter += Time.deltaTime;
 
-            if (objectToChange.tag == "Box")
+            if (objectToChange.tag == "Box" && framesCounter >= setcoldown)
             {
 
                 if (saveMaterial.GetComponent<Material_propierties>().material == "Light")
@@ -348,7 +351,11 @@ public class plyer : MonoBehaviour
                 }
             }
         }
-        else objectToChange = null;
+        else
+        {
+            objectToChange = null;
+            framesCounter = 0;
+        }
 
     }
 
