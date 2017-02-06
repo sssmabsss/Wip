@@ -15,6 +15,7 @@ public class plyer : MonoBehaviour
     public int jumpforce;
     public bool riding;
 
+
     [Header("Checkers")]
     public Transform groundChecker;
     public LayerMask groundMask;
@@ -88,9 +89,13 @@ public class plyer : MonoBehaviour
 
         hitcolliderGround = Physics2D.OverlapArea(pointA, pointB, groundMask);
 
+
+
         if (hitcolliderGround != null)
         {
             isGrounded = true;
+            
+
         }
         else 
         {
@@ -152,6 +157,7 @@ public class plyer : MonoBehaviour
 
         if (Input.GetMouseButton(1))     Debug.DrawLine(gameObject.transform.position + dir, mousePosition, Color.yellow);
         if (Input.GetMouseButton(0))     Debug.DrawLine(mousePosition, gameObject.transform.position + dir, Color.green);
+
 
         //aiming logic
 
