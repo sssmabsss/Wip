@@ -23,6 +23,9 @@ public class title_screen : MonoBehaviour
     public float counter;
     public bool isActive;
 
+    [Header("canvas")]
+    public GameObject canvas;
+
 
     // Use this for initialization
     void Start()
@@ -30,6 +33,7 @@ public class title_screen : MonoBehaviour
 
         fading = true;
         isActive = false;
+        canvas.SetActive(false);
     }
 
     // Update is called once per frame
@@ -73,10 +77,36 @@ public class title_screen : MonoBehaviour
     {
         startcolor.a = 0;
 
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            canvas.SetActive(true);
+            isActive = false;
+        }
+
         if (.8 <= counter)
         {
             counter = 0;
             isActive = !isActive;
         }
+
+
     }
+
+    public void onclicknew()
+    {
+        SceneManager.LoadScene("level_debug");
+    }
+    public void onclickselect()
+    {
+        SceneManager.LoadScene("level_debug");
+    }
+    public void onclickoptions()
+    {
+
+    }
+    public void onclickexit()
+    {
+        Application.Quit();
+    }
+
 }
