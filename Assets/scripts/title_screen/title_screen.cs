@@ -16,15 +16,22 @@ public class title_screen : MonoBehaviour
     [Header("title")]
     public GameObject wip, alchemist;
     public Vector3 endwip = new Vector3(0, 1, 0), endalche = new Vector3(0, -1, 0);
+    public GameObject mainMenu;
 
     [Header("start")]
     public GameObject start;
     public Color startcolor;
     public float counter;
     public bool isActive;
+    public bool isVisible;
 
     [Header("canvas")]
     public GameObject canvas;
+
+    [Header("Options Menu")]
+    public GameObject optionsMenu;
+    public GameObject selectMenu;
+    public bool optionsIsvisible;
 
 
     // Use this for initialization
@@ -34,6 +41,9 @@ public class title_screen : MonoBehaviour
         fading = true;
         isActive = false;
         canvas.SetActive(false);
+        optionsMenu.SetActive(false);
+        isVisible = true;
+        optionsIsvisible = false; 
     }
 
     // Update is called once per frame
@@ -62,6 +72,14 @@ public class title_screen : MonoBehaviour
         if (isActive) startcolor.a = 1;
         else startcolor.a = 0;
 
+        if (optionsIsvisible && Input.GetKeyDown("escape"))
+        {
+            optionsIsvisible = false;
+            optionsMenu.SetActive(false);
+            mainMenu.SetActive(true);
+            isVisible = true;
+        }
+
     }
 
     public void showtitle()
@@ -77,13 +95,14 @@ public class title_screen : MonoBehaviour
     {
         startcolor.a = 0;
 
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.anyKey)
         {
             canvas.SetActive(true);
-            isActive = false;
+            isVisible = false;
+            start.SetActive(false);
         }
 
-        if (.8 <= counter)
+        if (.8 <= counter && isVisible)
         {
             counter = 0;
             isActive = !isActive;
@@ -102,7 +121,9 @@ public class title_screen : MonoBehaviour
     }
     public void onclickoptions()
     {
-
+        mainMenu.SetActive(false);
+        optionsMenu.SetActive(true);
+        optionsIsvisible = true;
     }
     public void onclickexit()
     {

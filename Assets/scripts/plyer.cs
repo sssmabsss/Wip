@@ -89,13 +89,9 @@ public class plyer : MonoBehaviour
 
         hitcolliderGround = Physics2D.OverlapArea(pointA, pointB, groundMask);
 
-
-
         if (hitcolliderGround != null)
         {
-            isGrounded = true;
-            
-
+            isGrounded = true; 
         }
         else 
         {
@@ -308,7 +304,7 @@ public class plyer : MonoBehaviour
 
             // GetComponentInChildren<TextMesh>().text = hit.transform.gameObject.name;
 
-        if (rayhit.tag == "Material")
+        if (rayhit != null && rayhit.tag == "Material")
         {
            // lighting_particle.GetComponent<ParticleSystem>().Play();
                 if (framesCounter >= getcoldown)
@@ -381,7 +377,7 @@ public class plyer : MonoBehaviour
     }
 
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
 
         if (other.gameObject.tag == "platform")
