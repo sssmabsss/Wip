@@ -60,7 +60,7 @@ public class BoxPropierties : MonoBehaviour {
 
         if (Vector2.Angle(groundhit.normal, Vector2.up) != 0) normalAngle = Vector2.Angle(groundhit.normal, Vector2.up);
 
-        rayhit = groundhit.transform.gameObject;
+        if (rayhit != null) rayhit = groundhit.transform.gameObject;
 
         Vector3 anglerotate = new Vector3(0, 0, normalAngle);
 

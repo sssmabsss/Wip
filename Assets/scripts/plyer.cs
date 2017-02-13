@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class plyer : MonoBehaviour
 {
@@ -31,6 +32,8 @@ public class plyer : MonoBehaviour
     [Header("Graphics")]
     public bool facingRight;
     public Transform graphicsTransform;
+    public GameObject graphics;
+    public GameObject bar;
 
     [Header("forces")]
     public int weight;
@@ -51,6 +54,7 @@ public class plyer : MonoBehaviour
     public int sprite;
     public float getcoldown;
     public float setcoldown;
+
 
     [Header("life")]
     public int life;
@@ -78,6 +82,8 @@ public class plyer : MonoBehaviour
         lastcheckpoint = gameObject.transform.position;
         life = 3;
         invencibility = false;
+
+        
     }
 
     void FixedUpdate()
@@ -127,7 +133,6 @@ public class plyer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         //for aiming with the mouse
 
         mousePosition = Input.mousePosition;
@@ -152,8 +157,8 @@ public class plyer : MonoBehaviour
         //debugin linecast:
 
         if (Input.GetMouseButton(1))     Debug.DrawLine(gameObject.transform.position + dir, mousePosition, Color.yellow);
-        if (Input.GetMouseButton(0))     Debug.DrawLine(mousePosition, gameObject.transform.position + dir, Color.green);
 
+        if (Input.GetMouseButton(0))     Debug.DrawLine(mousePosition, gameObject.transform.position + dir, Color.green);
 
         //aiming logic
 
@@ -195,14 +200,17 @@ public class plyer : MonoBehaviour
         if (pushing)
         {
             coger();
-
+        }
+        else
+        {
+            if (TouchingObject !=null) TouchingObject.transform.parent = null;
         }
 
 
         //flip logic
 
-        if (facingRight && move < 0 && !pushing) flip();
-        else if (!facingRight && move > 0 && !pushing) flip();
+        if (facingRight && move < 0) flip();
+        else if (!facingRight && move > 0) flip();
 
         //restart logic
 
@@ -266,10 +274,11 @@ public class plyer : MonoBehaviour
 
     void coger()
     {
-        TouchingObject.GetComponent<BoxPropierties>().rb.velocity = new Vector2(0, forcedown); ;
+        TouchingObject.GetComponent<BoxPropierties>().rb.velocity = new Vector2(0, forcedown);
 
         if (TouchingObject.GetComponent<BoxPropierties>().spritecolor < 1 && pushing)
         {
+            TouchingObject.transform.parent = graphics.transform;
             if (facingRight)
             {
                 TouchingObject.transform.position = new Vector3(gameObject.transform.position.x + 1.1f, gameObject.transform.position.y, gameObject.transform.position.z);
@@ -279,7 +288,10 @@ public class plyer : MonoBehaviour
                 TouchingObject.transform.position = new Vector3(gameObject.transform.position.x - 1.1f, gameObject.transform.position.y, gameObject.transform.position.z);
             }
         }
-        else pushing = !pushing;
+        else
+        {
+            pushing = !pushing;
+        }
     }
 
     void aimObject()
@@ -301,13 +313,11 @@ public class plyer : MonoBehaviour
             framesCounter = 0;
         }
 
-
-            // GetComponentInChildren<TextMesh>().text = hit.transform.gameObject.name;
-
         if (rayhit != null && rayhit.tag == "Material")
         {
-           // lighting_particle.GetComponent<ParticleSystem>().Play();
-                if (framesCounter >= getcoldown)
+            bar.GetComponent<castbar>().up();
+
+            if (framesCounter >= getcoldown)
                 {
                     saveMaterial = rayhit;
                     print("he tocado un materiaL");
