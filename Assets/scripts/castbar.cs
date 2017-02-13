@@ -7,6 +7,7 @@ public class castbar : MonoBehaviour {
     public Vector3 startPosition;
     public Vector3 endPosition;
     public Vector3 currentPosition;
+    public float speed;
 
 
     // Use this for initialization
@@ -16,6 +17,7 @@ public class castbar : MonoBehaviour {
         endPosition = new Vector3(-0, gameObject.transform.localPosition.y, gameObject.transform.localPosition.z);
         currentPosition = new Vector3(gameObject.transform.localPosition.x, gameObject.transform.localPosition.y, gameObject.transform.localPosition.z);
 
+        speed = 127 / 100;
 
     }
 	
@@ -27,15 +29,20 @@ public class castbar : MonoBehaviour {
 
     public void up()
     {
-        currentPosition.x++;
+        currentPosition.x += speed;
 
-        if (currentPosition.x > endPosition.x) currentPosition.x = endPosition.x;
+        if(currentPosition.x > endPosition.x) down();
     }
 
     public void down()
     {
-        currentPosition.x--;
+         currentPosition.x = startPosition.x;
+    }
 
-        if (currentPosition.x < startPosition.x) currentPosition.x = startPosition.x;
+    public void fastup()
+    {
+        currentPosition.x += speed *1.5f;
+
+        if(currentPosition.x > endPosition.x) down();
     }
 }

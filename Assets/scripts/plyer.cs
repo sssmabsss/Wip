@@ -162,18 +162,26 @@ public class plyer : MonoBehaviour
 
         //aiming logic
 
-        if (Input.GetMouseButton(1))
+        if(Input.GetMouseButton(1))
         {
             aimObject();
 
         }
-        else if (Input.GetMouseButtonUp(1)) framesCounter = 0;
+        else if(Input.GetMouseButtonUp(1))
+        {
+            framesCounter = 0;
+            bar.GetComponent<castbar>().fastup();
+        }
 
-        if (Input.GetMouseButton(0))
+        if(Input.GetMouseButton(0))
         {
             changeMaterial();
         }
-        else if (Input.GetMouseButtonUp(1)) framesCounter = 0;
+        else if(Input.GetMouseButtonUp(1))
+        {
+            framesCounter = 0;
+            bar.GetComponent<castbar>().down();
+        }
 
         //movement logic
 
@@ -322,8 +330,9 @@ public class plyer : MonoBehaviour
                     saveMaterial = rayhit;
                     print("he tocado un materiaL");
                     framesCounter = 0;
-                }
+            }
         }
+        else bar.GetComponent<castbar>().down();
 
     }
 
@@ -340,8 +349,11 @@ public class plyer : MonoBehaviour
             objectToChange = changehit.transform.gameObject;
             framesCounter += Time.deltaTime;
 
-            if (objectToChange.tag == "Box" && framesCounter >= setcoldown)
+            bar.GetComponent<castbar>().fastup();
+
+            if (objectToChange.tag == "Box" && framesCounter >= setcoldown && saveMaterial != null)
             {
+
 
                 if (saveMaterial.GetComponent<Material_propierties>().material == "Light")
                 {
@@ -367,6 +379,7 @@ public class plyer : MonoBehaviour
         {
             objectToChange = null;
             framesCounter = 0;
+            bar.GetComponent<castbar>().down();
         }
 
     }
