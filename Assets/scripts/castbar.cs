@@ -41,7 +41,7 @@ public class castbar : MonoBehaviour {
 
     public void fastup()
     {
-        currentPosition.x += speed *1.5f;
+        currentPosition.x += speed *2.5f;
 
         if(currentPosition.x > endPosition.x) down();
     }

@@ -81,9 +81,7 @@ public class plyer : MonoBehaviour
         facingRight = true;
         lastcheckpoint = gameObject.transform.position;
         life = 3;
-        invencibility = false;
-
-        
+        invencibility = false;        
     }
 
     void FixedUpdate()
@@ -282,7 +280,7 @@ public class plyer : MonoBehaviour
 
     void coger()
     {
-        TouchingObject.GetComponent<BoxPropierties>().rb.velocity = new Vector2(0, forcedown);
+      if(TouchingObject != null)  TouchingObject.GetComponent<BoxPropierties>().rb.velocity = new Vector2(0, forcedown);
 
         if (TouchingObject.GetComponent<BoxPropierties>().spritecolor < 1 && pushing)
         {

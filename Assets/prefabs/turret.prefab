@@ -385,7 +385,7 @@ MonoBehaviour:
   direction: {x: -1, y: 0, z: 0}
   shootspeed: {x: 0.1, y: 0}
   shootInterval: 2
-  target: {fileID: 0}
+  target: {fileID: 4664491140241044, guid: 50f9a7915fbd7ab40a686f494ac9cb14, type: 2}
   distance: 0
   bulletdistance: -15
   shootRange: 8
