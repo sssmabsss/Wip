@@ -113,11 +113,11 @@ public class title_screen : MonoBehaviour
 
     public void onclicknew()
     {
-        SceneManager.LoadScene("level_debug");
+        SceneManager.LoadScene("Prototype");
     }
     public void onclickselect()
     {
-        SceneManager.LoadScene("level_debug");
+        SceneManager.LoadScene("test_level");
     }
     public void onclickoptions()
     {

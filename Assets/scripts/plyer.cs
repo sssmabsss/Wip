@@ -9,12 +9,14 @@ public class plyer : MonoBehaviour
     [Header("Movement")]
     public Rigidbody2D rb;
     public float move;
+    public float movevertical;
     public bool Moving;
     public int speed;
     public int speedwalk;
     public int speedObject;
     public int jumpforce;
     public bool riding;
+    public bool GodMode;
 
 
     [Header("Checkers")]
@@ -81,7 +83,8 @@ public class plyer : MonoBehaviour
         facingRight = true;
         lastcheckpoint = gameObject.transform.position;
         life = 3;
-        invencibility = false;        
+        invencibility = false;
+        GodMode = false;    
     }
 
     void FixedUpdate()
@@ -186,9 +189,26 @@ public class plyer : MonoBehaviour
         MovementUpdate();
         rb.velocity = new Vector2(speed * move, rb.velocity.y);
 
+        if (GodMode)
+        {
+            rb.velocity = new Vector2(speed * movevertical, rb.velocity.y);
+            rb.velocity = new Vector2(speed * move, rb.velocity.x);
+            life = 10;
+            invencibilityTime = 999;
+        }
+        else
+        {
+            life = 3;
+            invencibilityTime = 3;
+        }
+
+
+        if (Input.GetKeyDown("f10")) GodMode = !GodMode;
+
+
         //Jump logic
 
-        if(Input.GetKeyDown("up") || Input.GetKeyDown("w"))
+            if (Input.GetKeyDown("up") || Input.GetKeyDown("w"))
         {
             if(isGrounded)
             {
@@ -252,6 +272,7 @@ public class plyer : MonoBehaviour
 
 
         move = Input.GetAxis("Horizontal");
+        if (GodMode) movevertical = Input.GetAxis("Vertical");
         if (move != 0) Moving = true;
         else Moving = false;
 

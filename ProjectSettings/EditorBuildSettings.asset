@@ -11,3 +11,7 @@ EditorBuildSettings:
     path: Assets/title.unity
   - enabled: 1
     path: Assets/level_debug.unity
+  - enabled: 1
+    path: Assets/test_level.unity
+  - enabled: 1
+    path: Assets/Prototype.unity
