@@ -62,7 +62,7 @@ public class BoxPropierties : MonoBehaviour {
 
         if (rayhit != null) rayhit = groundhit.transform.gameObject;
 
-        Vector3 anglerotate = new Vector3(0, 0, normalAngle);
+       // Vector3 anglerotate = new Vector3(0, 0, normalAngle);
 
         angulosZ = transform.rotation.z;
 

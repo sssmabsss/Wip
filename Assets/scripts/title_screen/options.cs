@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class options : MonoBehaviour {
 
@@ -26,7 +27,8 @@ public class options : MonoBehaviour {
     {
         if(GUI.Button(new Rect(500, 100, 300, 100), "Start Game"))
         {
-            Application.LoadLevel(1);
+            SceneManager.LoadScene(1);
+            
         }
         if(GUI.Button(new Rect(500, 210, 300, 100), "Quit Game"))
         {
