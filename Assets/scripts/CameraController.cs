@@ -100,15 +100,20 @@ public class CameraController : MonoBehaviour {
             float shiftY = 0;
             if (targetBounds.min.y < bottom)
             {
-                shiftY = targetBounds.min.y - bottom;
+               shiftY = targetBounds.min.y - bottom;
             }
             else if (targetBounds.max.y > top)
             {
                 shiftY = targetBounds.max.y - top;
             }
-            top += shiftY;
-            bottom += shiftY;
-            centre = new Vector2((left + right) / 2, (top + bottom) / 2);
+            // top += shiftY;
+
+            // bottom += shiftY;
+
+            top = targetBounds.max.y;
+            bottom = targetBounds.min.y;
+
+            centre = new Vector2((left + right) /2, (top + bottom) /2);
             velocity = new Vector2(shiftX, shiftY);
         }
     }

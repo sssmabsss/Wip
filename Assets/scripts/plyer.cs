@@ -30,6 +30,7 @@ public class plyer : MonoBehaviour
     public bool isTouchingWall;
     public bool isTouchingObject;
     public GameObject TouchingObject;
+    public bool IsPaused;
 
     [Header("Graphics")]
     public bool facingRight;
@@ -72,6 +73,30 @@ public class plyer : MonoBehaviour
     [Header("particles")]
     public GameObject lighting_particle;
 
+    [Header("Inputs")]
+    public KeyCode AimMaterial;
+    public KeyCode ChangeMaterial;
+    public KeyCode Jump;
+    public KeyCode PushObject;
+    public KeyCode AxisX;
+    public KeyCode axisY;
+
+    public KeyCode ps4AimMaterial;
+    public KeyCode ps4ChangeMaterial;
+    public KeyCode ps4Jump;
+    public KeyCode ps4PushObject;
+    public KeyCode ps4AxisX;
+    public KeyCode ps4axisY;
+
+    public KeyCode XoneAimMaterial;
+    public KeyCode XoneChangeMaterial;
+    public KeyCode XoneJump;
+    public KeyCode XonePushObject;
+    public KeyCode XoneAxisX;
+    public KeyCode XoneaxisY;
+
+
+
 
 
 
@@ -84,7 +109,8 @@ public class plyer : MonoBehaviour
         lastcheckpoint = gameObject.transform.position;
         life = 3;
         invencibility = false;
-        GodMode = false;    
+        GodMode = false;
+        IsPaused = false;
     }
 
     void FixedUpdate()
@@ -134,130 +160,129 @@ public class plyer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //for aiming with the mouse
+            //for aiming with the mouse
 
-        mousePosition = Input.mousePosition;
-        mousePosition.z = 10;
-        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            mousePosition = Input.mousePosition;
+            mousePosition.z = 10;
+            mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
-        mousePosition2D.x = mousePosition.x;
-        mousePosition2D.y = mousePosition.y;
+            mousePosition2D.x = mousePosition.x;
+            mousePosition2D.y = mousePosition.y;
 
-        dir.y = .5f;
+            dir.y = .5f;
 
-        if (facingRight)
-        {
-            dir.x =  + 1;
-        }
-        else
-        {
-            dir.x =  -1;
-        }
-
-
-        //debugin linecast:
-
-        if (Input.GetMouseButton(1))     Debug.DrawLine(gameObject.transform.position + dir, mousePosition, Color.yellow);
-
-        if (Input.GetMouseButton(0))     Debug.DrawLine(mousePosition, gameObject.transform.position + dir, Color.green);
-
-        //aiming logic
-
-        if(Input.GetMouseButton(1))
-        {
-            aimObject();
-
-        }
-        else if(Input.GetMouseButtonUp(1))
-        {
-            framesCounter = 0;
-            bar.GetComponent<castbar>().fastup();
-        }
-
-        if(Input.GetMouseButton(0))
-        {
-            changeMaterial();
-        }
-        else if(Input.GetMouseButtonUp(1))
-        {
-            framesCounter = 0;
-            bar.GetComponent<castbar>().down();
-        }
-
-        //movement logic
-
-        MovementUpdate();
-        rb.velocity = new Vector2(speed * move, rb.velocity.y);
-
-        if (GodMode)
-        {
-            rb.velocity = new Vector2(speed * movevertical, rb.velocity.y);
-            rb.velocity = new Vector2(speed * move, rb.velocity.x);
-            life = 10;
-            invencibilityTime = 999;
-        }
-        else
-        {
-            life = 3;
-            invencibilityTime = 3;
-        }
-
-
-        if (Input.GetKeyDown("f10")) GodMode = !GodMode;
-
-
-        //Jump logic
-
-            if (Input.GetKeyDown("up") || Input.GetKeyDown("w"))
-        {
-            if(isGrounded)
+            if(facingRight)
             {
-                rb.velocity = new Vector2(rb.velocity.x, 0);
-                rb.AddForce(new Vector2(0, jumpforce), ForceMode2D.Impulse);
+                dir.x = +1;
             }
-        }
-
-        //pushing logic
-
-        if (Input.GetKeyDown("space") && isTouchingObject) pushing = !pushing;
-
-
-
-        if (pushing)
-        {
-            coger();
-        }
-        else
-        {
-            if (TouchingObject !=null) TouchingObject.transform.parent = null;
-        }
-
-
-        //flip logic
-
-        if (facingRight && move < 0) flip();
-        else if (!facingRight && move > 0) flip();
-
-        //restart logic
-
-        if (life <= 0) restardCheckpoint();
-
-        //invencibility logic
-
-        if (invencibility)
-        {
-            framesCounterhit = 0;
-            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-            framesCounter += Time.deltaTime;
-            if (framesCounter >= invencibilityTime)
+            else
             {
-                invencibility = false;
+                dir.x = -1;
+            }
+
+
+            //debugin linecast:
+
+            if(Input.GetMouseButton(1)) Debug.DrawLine(gameObject.transform.position + dir, mousePosition, Color.yellow);
+
+            if(Input.GetMouseButton(0)) Debug.DrawLine(mousePosition, gameObject.transform.position + dir, Color.green);
+
+            //aiming logic
+
+            if(Input.GetMouseButton(1))
+            {
+                aimObject();
+
+            }
+            else if(Input.GetMouseButtonUp(1))
+            {
                 framesCounter = 0;
+                bar.GetComponent<castbar>().fastup();
             }
-        }
-        else gameObject.GetComponent<SpriteRenderer>().color = Color.white;
 
-        }
+            if(Input.GetMouseButton(0))
+            {
+                changeMaterial();
+            }
+            else if(Input.GetMouseButtonUp(1))
+            {
+                framesCounter = 0;
+                bar.GetComponent<castbar>().down();
+            }
+
+            //movement logic
+
+            MovementUpdate();
+            rb.velocity = new Vector2(speed * move, rb.velocity.y);
+
+            if(GodMode)
+            {
+                rb.velocity = new Vector2(speed * movevertical, rb.velocity.y);
+                rb.velocity = new Vector2(speed * move, rb.velocity.x);
+                life = 10;
+                invencibilityTime = 999;
+            }
+            else
+            {
+                life = 3;
+                invencibilityTime = 3;
+            }
+
+
+            if(Input.GetKeyDown("f10")) GodMode = !GodMode;
+
+
+            //Jump logic
+
+            if(Input.GetKeyDown("up") || Input.GetKeyDown("w"))
+            {
+                if(isGrounded)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, 0);
+                    rb.AddForce(new Vector2(0, jumpforce), ForceMode2D.Impulse);
+                }
+            }
+
+            //pushing logic
+
+            if(Input.GetKeyDown("space") && isTouchingObject) pushing = !pushing;
+
+
+
+            if(pushing)
+            {
+                coger();
+            }
+            else
+            {
+                if(TouchingObject != null) TouchingObject.transform.parent = null;
+            }
+
+
+            //flip logic
+
+            if(facingRight && move < 0) flip();
+            else if(!facingRight && move > 0) flip();
+
+            //restart logic
+
+            if(life <= 0) restardCheckpoint();
+
+            //invencibility logic
+
+            if(invencibility)
+            {
+                framesCounterhit = 0;
+                gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+                framesCounter += Time.deltaTime;
+                if(framesCounter >= invencibilityTime)
+                {
+                    invencibility = false;
+                    framesCounter = 0;
+                }
+            }
+            else gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+    }
 
     void OnDrawGizmos()
     {
@@ -436,6 +461,21 @@ public class plyer : MonoBehaviour
         {
             transform.parent = null;
             riding = false;
+        }
+    }
+
+    public void OnPause()
+    {
+
+
+
+        if (IsPaused)
+        {
+            Time.timeScale = 0.0f;
+        }
+        else
+        {
+            Time.timeScale = 1.0f;
         }
     }
 }
