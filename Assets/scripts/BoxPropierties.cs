@@ -8,6 +8,10 @@ public class BoxPropierties : MonoBehaviour {
     public int weight;
     public bool isTouchingWall;
     public Vector2 rbvelocity;
+    public float normalAngle;
+    public GameObject rayhit;
+    public LayerMask hitmask;
+    public float angulosZ;
 
     [Header("weights")]
     public Rigidbody2D rb;
@@ -43,6 +47,32 @@ public class BoxPropierties : MonoBehaviour {
 
         changeMaterial();
         rbvelocity = rb.velocity;
+
+
+
+        //getting normals
+        
+        Vector2 rayposition = new Vector2(transform.position.x, transform.position.y);
+
+        Debug.DrawRay(rayposition, Vector2.down, Color.magenta);
+
+        RaycastHit2D groundhit = Physics2D.Raycast(rayposition, Vector2.down, 1, hitmask);
+
+        if (Vector2.Angle(groundhit.normal, Vector2.up) != 0) normalAngle = Vector2.Angle(groundhit.normal, Vector2.up);
+
+        if (rayhit != null) rayhit = groundhit.transform.gameObject;
+
+       // Vector3 anglerotate = new Vector3(0, 0, normalAngle);
+
+        angulosZ = transform.rotation.z;
+
+        // assigns the raycast's normal direction to the VisualMesh' up directio. this makes it look 'from the surface'
+        // then use some lerping, to smooth it all out
+        transform.up = Vector3.Lerp(transform.up, groundhit.normal, Time.deltaTime * 10);
+
+        // this part makes sure the Y rotation is properly preserved from the parent gameObject as well
+        transform.RotateAround(transform.position, transform.up, transform.localEulerAngles.y);
+
     }
 
     void changeMaterial()
