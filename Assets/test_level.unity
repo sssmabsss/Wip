@@ -1281,10 +1281,10 @@ MonoBehaviour:
   framesCounterhit: 0
   lastcheckpoint: {x: 0, y: 0, z: 0}
   lighting_particle: {fileID: 0}
-  AimMaterial: 0
-  ChangeMaterial: 0
-  Jump: 0
-  PushObject: 0
+  AimMaterial: 323
+  ChangeMaterial: 324
+  Jump: 32
+  PushObject: 304
   AxisX: 0
   axisY: 0
   ps4AimMaterial: 0

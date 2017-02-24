@@ -28,57 +28,19 @@ public class title_screen : MonoBehaviour
     [Header("canvas")]
     public GameObject canvas;
 
-    [Header("Options Menu")]
-    public GameObject optionsMenu;
-    public GameObject selectMenu;
-    public bool optionsIsvisible;
+
 
 
     // Use this for initialization
     void Start()
     {
 
-        fading = true;
-        isActive = false;
-        canvas.SetActive(false);
-        optionsMenu.SetActive(false);
-        isVisible = true;
-        optionsIsvisible = false; 
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
-
-        screen.GetComponent<SpriteRenderer>().color = color;
-        start.GetComponent<SpriteRenderer>().color = startcolor;
-
-        if (fading)
-        {
-
-            color.a += Time.deltaTime * smoothVelocity;
-            if (color.a > maxfade)
-                showtitle();
-        }
-        else
-        {
-            color.a -= Time.deltaTime * smoothVelocity;
-            if (color.a < minfade) showtitle();
-
-        }
-        counter += Time.deltaTime;
-
-        if (isActive) startcolor.a = 1;
-        else startcolor.a = 0;
-
-        if (optionsIsvisible && Input.GetKeyDown("escape"))
-        {
-            optionsIsvisible = false;
-            optionsMenu.SetActive(false);
-            mainMenu.SetActive(true);
-            isVisible = true;
-        }
 
     }
 
@@ -108,26 +70,14 @@ public class title_screen : MonoBehaviour
             isActive = !isActive;
         }
 
-
+        if (GetComponent<ButtonsFunctions>().optionsIsvisible && Input.GetKeyDown("escape"))
+        {
+            GetComponent<ButtonsFunctions>().optionsIsvisible = false;
+            isVisible = true;
+            GetComponent<ButtonsFunctions>().hideOptions();
+            GetComponent<ButtonsFunctions>().showMainMenu();
+        }
     }
 
-    public void onclicknew()
-    {
-        SceneManager.LoadScene("Prototype");
-    }
-    public void onclickselect()
-    {
-        SceneManager.LoadScene("test_level");
-    }
-    public void onclickoptions()
-    {
-        mainMenu.SetActive(false);
-        optionsMenu.SetActive(true);
-        optionsIsvisible = true;
-    }
-    public void onclickexit()
-    {
-        Application.Quit();
-    }
-
+   
 }

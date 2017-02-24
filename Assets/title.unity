@@ -136,6 +136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 53518369}
   - component: {fileID: 53518368}
+  - component: {fileID: 53518371}
   - component: {fileID: 53518370}
   m_Layer: 0
   m_Name: screen manager
@@ -172,9 +173,6 @@ MonoBehaviour:
   isActive: 0
   isVisible: 0
   canvas: {fileID: 1350816079}
-  optionsMenu: {fileID: 50033469}
-  selectMenu: {fileID: 998987817}
-  optionsIsvisible: 0
 --- !u!4 &53518369
 Transform:
   m_ObjectHideFlags: 0
@@ -196,9 +194,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 53518367}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 834d826db66f6654393184d757bdfb0b, type: 3}
+  m_Script: {fileID: 11500000, guid: 759f287e174335c41945f84cce6d7447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenu: {fileID: 0}
+  optionsMenu: {fileID: 0}
+  selectMenu: {fileID: 0}
+  optionsIsvisible: 0
+--- !u!114 &53518371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 53518367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2c03ce56cfea1441ad94c1cc3fe69be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screen: {fileID: 0}
+  color: {r: 0, g: 0, b: 0, a: 0}
+  fading: 0
+  minfade: 0
+  maxfade: 0
+  smoothVelocity: 0
+  start: {fileID: 0}
+  startcolor: {r: 0, g: 0, b: 0, a: 0}
+  counter: 0
+  isActive: 0
+  isVisible: 0
 --- !u!1 &124844265
 GameObject:
   m_ObjectHideFlags: 0

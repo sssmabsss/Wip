@@ -44,6 +44,7 @@ public class options : MonoBehaviour {
             if(GUI.Button(new Rect(810, 100, 300, 100), "Increase Quality"))
             {
                 QualitySettings.IncreaseLevel();
+                
                 Debug.Log("Increased quality");
             }
             //DECREASE QUALITY PRESET
