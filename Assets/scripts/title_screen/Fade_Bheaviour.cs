@@ -12,7 +12,7 @@ public class Fade_Bheaviour : MonoBehaviour {
     public float smoothVelocity;
 
     [Header("start")]
-    public GameObject start;
+   // public GameObject start;
     public Color startcolor;
     public float counter;
     public bool isActive;
@@ -30,7 +30,6 @@ public class Fade_Bheaviour : MonoBehaviour {
 
 
         screen.GetComponent<SpriteRenderer>().color = color;
-        start.GetComponent<SpriteRenderer>().color = startcolor;
 
         if (fading)
         {
@@ -47,10 +46,5 @@ public class Fade_Bheaviour : MonoBehaviour {
 
         }
         counter += Time.deltaTime;
-
-        if (isActive) startcolor.a = 1;
-        else startcolor.a = 0;
-
-
     }
 }

@@ -70,4 +70,48 @@ public class ButtonsFunctions : MonoBehaviour {
         optionsMenu.SetActive(false);
         optionsIsvisible = false;
     }
+
+    public void res720()
+    {
+        Screen.SetResolution(1280, 720, true, 60);
+        Debug.Log("1080p");
+        Debug.Log("60Hz");
+    }
+
+    public void res1200()
+    {
+        Screen.SetResolution(1600, 1200, true, 60);
+        Debug.Log("1080p");
+        Debug.Log("60Hz");
+    }
+
+    public void res1080()
+    {
+        Screen.SetResolution(1920, 1080, true, 60);
+        Debug.Log("1080p");
+        Debug.Log("60Hz");
+    }
+
+    public void Fast()
+    {
+        QualitySettings.SetQualityLevel(0, true);
+    }
+
+    public void Good()
+    {
+        QualitySettings.SetQualityLevel(1, true);
+    }
+
+    public void Fantastic()
+    {
+        QualitySettings.SetQualityLevel(2, true);
+    }
+
+    public void Ultra()
+    {
+        QualitySettings.SetQualityLevel(3, true);
+    }
+
+
+
 }
