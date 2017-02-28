@@ -74,14 +74,14 @@ public class ButtonsFunctions : MonoBehaviour {
     public void res720()
     {
         Screen.SetResolution(1280, 720, true, 60);
-        Debug.Log("1080p");
+        Debug.Log("720p");
         Debug.Log("60Hz");
     }
 
     public void res1200()
     {
         Screen.SetResolution(1600, 1200, true, 60);
-        Debug.Log("1080p");
+        Debug.Log("1200p");
         Debug.Log("60Hz");
     }
 
