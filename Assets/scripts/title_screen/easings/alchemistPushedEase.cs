@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class wipEaseIntro : MonoBehaviour
+public class alchemistPushedEase : MonoBehaviour
 {
 
 
@@ -19,11 +19,11 @@ public class wipEaseIntro : MonoBehaviour
     {
 
         initValue = transform.position.y;
-        finalValue = -5.5f;
+        finalValue = -1.2f;
         currentValue = initValue;
 
         framesCounter = 0;
-        framesDuration = 90;
+        framesDuration = 70;
 
         initEase = 0;
     }
@@ -31,12 +31,16 @@ public class wipEaseIntro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        framesCounter++;
-        if (framesCounter <= framesDuration)
+        initEase++;
+        if (initEase >= 128)
         {
-            currentValue = Easings.ElasticOut(framesCounter, initValue, finalValue, framesDuration);
+            framesCounter++;
+            if (framesCounter <= framesDuration)
+            {
+                currentValue = Easings.ElasticOut(framesCounter, initValue, finalValue, 30);
 
-            transform.position = new Vector3(0, currentValue, 0);
+                transform.position = new Vector3(0, currentValue, 0);
+            }
         }
     }
 }

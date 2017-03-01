@@ -1841,6 +1841,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1040451395}
   - component: {fileID: 1040451394}
+  - component: {fileID: 1040451396}
   m_Layer: 0
   m_Name: PRESS_ENTER_TO_START
   m_TagString: Untagged
@@ -1896,6 +1897,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1040451396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1040451393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 562c020e9fca82b4cac612272dc0b0d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1143057281
 GameObject:
   m_ObjectHideFlags: 0
@@ -2635,6 +2647,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1855546082}
   - component: {fileID: 1855546081}
+  - component: {fileID: 1855546083}
+  - component: {fileID: 1855546084}
   m_Layer: 0
   m_Name: the alchemist
   m_TagString: Untagged
@@ -2684,12 +2698,34 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1855546080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15, y: 1.5, z: 0}
+  m_LocalPosition: {x: -15, y: 1.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1855546083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1855546080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdaf05e2c939a6d4788a326f3fc49821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1855546084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1855546080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f0c0b59d5ce7b94aaf9bf537137784f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2052262009
 GameObject:
   m_ObjectHideFlags: 0
