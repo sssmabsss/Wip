@@ -10,9 +10,21 @@ public class enterEaseScale : MonoBehaviour
     float finalValueX;
     float currentValueX;
 
+    float initValueY;
+    float finalValueY;
+    float currentValueY;
+
+    float contValueX;
+    float contValueY;
+
+
     int framesCounter;
     int framesDuration;
     int initEase;
+
+    bool blinking;
+    int blinkTimer;
+    int shrinkTimer;
 
     // Use this for initialization
     void Start()
@@ -22,22 +34,93 @@ public class enterEaseScale : MonoBehaviour
         finalValueX = 1.08f;
         currentValueX = initValueX;
 
-        framesCounter = 0;
-        framesDuration = 10;
+        initValueY = transform.localScale.y;
+        finalValueY = 1.08f;
+        currentValueY = initValueY;
 
+        contValueX = currentValueX;
+        contValueY = currentValueY;
+
+        framesCounter = 0;
+        framesDuration = 30;
         initEase = 0;
+
+        blinking = false;
+        blinkTimer = 0;
+        shrinkTimer = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        framesCounter++;
-        if (framesCounter <= framesDuration)
-        {
-            currentValueX = Easings.CubicIn(framesCounter, initValueX, finalValueX, framesDuration);
-            //currentValueX = Easings.CubicOut(framesCounter, initValueX, finalValueX, framesDuration);
+        initEase++;
 
-            transform.localScale = new Vector3(currentValueX, transform.localScale.y, 0);
+        if (initEase >= 270)
+        {
+            if (blinking == true)
+            {
+                shrinkTimer++;
+                framesCounter++;
+                if (framesCounter <= framesDuration)
+                {
+                    currentValueX = Easings.ElasticOut(framesCounter, initValueX, -finalValueX, framesDuration);
+                    currentValueY = Easings.ElasticOut(framesCounter, initValueY, -finalValueY, framesDuration);
+
+                    transform.localScale = new Vector3(currentValueX, currentValueY, 0);
+                }
+
+                if (shrinkTimer >= 70)
+                {
+                    shrinkTimer = 0;
+                    framesCounter = 0;
+                    blinking = false;
+                }
+
+            }
+
+            if (blinking == false)
+            {
+                shrinkTimer++;
+                framesCounter++;
+                if (framesCounter <= framesDuration)
+                {
+                    currentValueX = Easings.ElasticOut(framesCounter, initValueX, finalValueX + 0.2f, framesDuration);
+                    currentValueY = Easings.ElasticOut(framesCounter, initValueY, finalValueY + 0.2f, framesDuration);
+
+                    transform.localScale = new Vector3(currentValueX, currentValueY, 0);
+                }
+
+                if (shrinkTimer >= 70)
+                {
+                    shrinkTimer = 0;
+                    framesCounter = 0;
+                    blinking = false;
+                }
+            }
         }
+    }
+
+    /*public void pressStart()
+    {
+        blinkTimer++;
+        if ((blinkTimer / 60) == 1)
+        {
+            blinkTimer = 0;
+            blinking = true;
+        }
+        else if ((blinkTimer / 60) == 0)
+        {
+            blinkTimer = 0;
+            blinking = false;
+        }
+    }*/
+
+    public void movingWip()
+    {
+
+    }
+    public void movinalchemist()
+    {
+
     }
 }
