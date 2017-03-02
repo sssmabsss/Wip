@@ -32,7 +32,7 @@ public class wipEaseIntro : MonoBehaviour
     void Update()
     {
         initEase++;
-        if (initEase >= 120)
+        if (initEase >= 180)
         {
             framesCounter++;
             if (framesCounter <= framesDuration)

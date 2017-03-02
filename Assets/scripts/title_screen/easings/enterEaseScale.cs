@@ -42,7 +42,7 @@ public class enterEaseScale : MonoBehaviour
         contValueY = currentValueY;
 
         framesCounter = 0;
-        framesDuration = 30;
+        framesDuration = 35;
         initEase = 0;
 
         blinking = false;
@@ -99,21 +99,6 @@ public class enterEaseScale : MonoBehaviour
             }
         }
     }
-
-    /*public void pressStart()
-    {
-        blinkTimer++;
-        if ((blinkTimer / 60) == 1)
-        {
-            blinkTimer = 0;
-            blinking = true;
-        }
-        else if ((blinkTimer / 60) == 0)
-        {
-            blinkTimer = 0;
-            blinking = false;
-        }
-    }*/
 
     public void movingWip()
     {

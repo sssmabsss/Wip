@@ -32,7 +32,7 @@ public class alchemistPushedEase : MonoBehaviour
     void Update()
     {
         initEase++;
-        if (initEase >= 128)
+        if (initEase >= 188)
         {
             framesCounter++;
             if (framesCounter <= framesDuration)
