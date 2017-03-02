@@ -19,11 +19,11 @@ public class wipEaseIntro : MonoBehaviour
     {
 
         initValue = transform.position.y;
-        finalValue = -5.8f;
+        finalValue = -6.2f;
         currentValue = initValue;
 
         framesCounter = 0;
-        framesDuration = 90;
+        framesDuration = 85;
 
         initEase = 0;
     }

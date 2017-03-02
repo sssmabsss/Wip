@@ -12,7 +12,7 @@ public class alchemistEaseIntro : MonoBehaviour
 
     int framesCounter;
     int framesDuration;
-    int initEase;
+    //int initEase;
 
     // Use this for initialization
     void Start()
@@ -25,7 +25,7 @@ public class alchemistEaseIntro : MonoBehaviour
         framesCounter = 0;
         framesDuration = 120;
 
-        initEase = 0;
+        //initEase = 0;
     }
 
     // Update is called once per frame

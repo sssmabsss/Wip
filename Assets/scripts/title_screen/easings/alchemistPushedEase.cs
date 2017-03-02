@@ -19,7 +19,7 @@ public class alchemistPushedEase : MonoBehaviour
     {
 
         initValue = transform.position.y;
-        finalValue = -1.2f;
+        finalValue = -1.5f;
         currentValue = initValue;
 
         framesCounter = 0;
