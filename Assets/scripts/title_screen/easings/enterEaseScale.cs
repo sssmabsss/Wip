@@ -14,8 +14,7 @@ public class enterEaseScale : MonoBehaviour
     float finalValueY;
     float currentValueY;
 
-    float contValueX;
-    float contValueY;
+    
 
 
     int framesCounter;
@@ -38,8 +37,7 @@ public class enterEaseScale : MonoBehaviour
         finalValueY = 1.08f;
         currentValueY = initValueY;
 
-        contValueX = currentValueX;
-        contValueY = currentValueY;
+        
 
         framesCounter = 0;
         framesDuration = 35;
