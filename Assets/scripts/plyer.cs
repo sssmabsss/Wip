@@ -36,7 +36,7 @@ public class plyer : MonoBehaviour
     public bool facingRight;
     public Transform graphicsTransform;
     public GameObject graphics;
-    public GameObject bar;
+  //  public GameObject bar;
 
     [Header("forces")]
     public int weight;
@@ -73,31 +73,9 @@ public class plyer : MonoBehaviour
     [Header("particles")]
     public GameObject lighting_particle;
 
-    [Header("Inputs")]
-    public KeyCode AimMaterial;
-    public KeyCode ChangeMaterial;
-    public KeyCode Jump;
-    public KeyCode PushObject;
-    public KeyCode AxisX;
-    public KeyCode axisY;
-
-    public KeyCode ps4AimMaterial;
-    public KeyCode ps4ChangeMaterial;
-    public KeyCode ps4Jump;
-    public KeyCode ps4PushObject;
-    public KeyCode ps4AxisX;
-    public KeyCode ps4axisY;
-
-    public KeyCode XoneAimMaterial;
-    public KeyCode XoneChangeMaterial;
-    public KeyCode XoneJump;
-    public KeyCode XonePushObject;
-    public KeyCode XoneAxisX;
-    public KeyCode XoneaxisY;
-
-
-
-
+    [Header("Ui")]
+    public castbar castbar;
+    public GameObject pause;
 
 
     // Use this for initialization
@@ -111,6 +89,7 @@ public class plyer : MonoBehaviour
         invencibility = false;
         GodMode = false;
         IsPaused = false;
+        pause.SetActive(false);
     }
 
     void FixedUpdate()
@@ -192,12 +171,14 @@ public class plyer : MonoBehaviour
             if(Input.GetMouseButton(1))
             {
                 aimObject();
+                
 
             }
             else if(Input.GetMouseButtonUp(1))
             {
                 framesCounter = 0;
-                bar.GetComponent<castbar>().fastup();
+            castbar.framesCounter = 0;
+
             }
 
             if(Input.GetMouseButton(0))
@@ -207,12 +188,18 @@ public class plyer : MonoBehaviour
             else if(Input.GetMouseButtonUp(1))
             {
                 framesCounter = 0;
-                bar.GetComponent<castbar>().down();
+              //  bar.GetComponent<castbar>().down();
             }
 
-            //movement logic
+        //pause logic
 
-            MovementUpdate();
+        if (Input.GetKeyDown("p")) IsPaused = !IsPaused;
+
+        OnPause();
+
+        //movement logic
+
+        MovementUpdate();
             rb.velocity = new Vector2(speed * move, rb.velocity.y);
 
             if(GodMode)
@@ -367,17 +354,18 @@ public class plyer : MonoBehaviour
 
         if (rayhit != null && rayhit.tag == "Material")
         {
-            bar.GetComponent<castbar>().up();
+
+            castbar.Charge_Bar(getcoldown);
 
             if (framesCounter >= getcoldown)
-                {
-                    saveMaterial = rayhit;
-                    print("he tocado un materiaL");
-                    framesCounter = 0;
+            {
+                saveMaterial = rayhit;
+                print("he tocado un materiaL");
+                framesCounter = 0;
             }
         }
-        else bar.GetComponent<castbar>().down();
 
+        else castbar.framesCounter = 0;
     }
 
     void changeMaterial()
@@ -393,11 +381,12 @@ public class plyer : MonoBehaviour
             objectToChange = changehit.transform.gameObject;
             framesCounter += Time.deltaTime;
 
-            bar.GetComponent<castbar>().fastup();
+          //  bar.GetComponent<castbar>().fastup();
 
             if (objectToChange.tag == "Box" && framesCounter >= setcoldown && saveMaterial != null)
             {
 
+                castbar.framesCounter = 0;
 
                 if (saveMaterial.GetComponent<Material_propierties>().material == "Light")
                 {
@@ -423,7 +412,7 @@ public class plyer : MonoBehaviour
         {
             objectToChange = null;
             framesCounter = 0;
-            bar.GetComponent<castbar>().down();
+            //bar.GetComponent<castbar>().down();
         }
 
     }
@@ -467,15 +456,15 @@ public class plyer : MonoBehaviour
     public void OnPause()
     {
 
-
-
         if (IsPaused)
         {
             Time.timeScale = 0.0f;
+            pause.SetActive(true);
         }
         else
         {
             Time.timeScale = 1.0f;
+            pause.SetActive(false);
         }
     }
 }

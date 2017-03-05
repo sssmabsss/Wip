@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dddeb109fa3428478f245094b84cc23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 114409253102865950, guid: 50f9a7915fbd7ab40a686f494ac9cb14, type: 2}
+  target: {fileID: 0}
   verticalOffset: 0
   lookAheadDstX: 4
   lookSmoothTimeX: 0.4

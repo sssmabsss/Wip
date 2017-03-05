@@ -23,8 +23,7 @@ public class title_screen : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
-
+        isVisible = true;
     }
 
     // Update is called once per frame
@@ -46,11 +45,12 @@ public class title_screen : MonoBehaviour
         counter += Time.deltaTime;
         startcolor.a = 0;
 
-        if (Input.anyKey)
+        if (Input.anyKey && isVisible)
         {
             isVisible = false;
             start.SetActive(false);
             GetComponent<ButtonsFunctions>().showMainMenu();
+            GetComponent<ButtonsFunctions>().optionsIsvisible = true;
         }
 
         if (.8 <= counter && isVisible)
@@ -59,12 +59,16 @@ public class title_screen : MonoBehaviour
             isActive = !isActive;
         }
 
-        if (GetComponent<ButtonsFunctions>().optionsIsvisible && Input.GetKeyDown("escape"))
+        if (GetComponent<ButtonsFunctions>().optionsIsvisible)
+             
         {
-            GetComponent<ButtonsFunctions>().optionsIsvisible = false;
-            isVisible = true;
-            GetComponent<ButtonsFunctions>().hideOptions();
-            GetComponent<ButtonsFunctions>().showMainMenu();
+            if (Input.GetKeyDown("escape"))
+              {
+                GetComponent<ButtonsFunctions>().optionsIsvisible = false;
+                isVisible = true;
+                GetComponent<ButtonsFunctions>().hideOptions();
+                GetComponent<ButtonsFunctions>().showMainMenu();
+              }
         }
 
         if(isActive) startcolor.a = 1;

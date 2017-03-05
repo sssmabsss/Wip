@@ -4,45 +4,35 @@ using UnityEngine;
 
 public class castbar : MonoBehaviour {
 
-    public Vector3 startPosition;
-    public Vector3 endPosition;
-    public Vector3 currentPosition;
-    public float speed;
+    public float startPosition;
+    public float endPosition;
+    public float currentPosition;
+    public float framesCounter;
 
 
     // Use this for initialization
     void Start () {
 
-        startPosition = new Vector3(-127, gameObject.transform.localPosition.y, gameObject.transform.localPosition.z);
-        endPosition = new Vector3(-0, gameObject.transform.localPosition.y, gameObject.transform.localPosition.z);
-        currentPosition = new Vector3(gameObject.transform.localPosition.x, gameObject.transform.localPosition.y, gameObject.transform.localPosition.z);
-
-        speed = 127 / 100;
 
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
-        gameObject.transform.localPosition = currentPosition;
-	}
+        
 
-    public void up()
-    {
-        currentPosition.x += speed;
-
-        if(currentPosition.x > endPosition.x) down();
     }
 
-    public void down()
+
+    public void Charge_Bar(float coldown)
     {
-         currentPosition.x = startPosition.x;
+        framesCounter += Time.deltaTime;
+
+        if (framesCounter >= coldown*2) framesCounter = coldown*2;
+
+        currentPosition = Easings.SineIn(framesCounter, startPosition, endPosition, coldown);
+
+        GetComponent<RectTransform>().localScale = new Vector3(currentPosition, GetComponent<RectTransform>().localScale.y, GetComponent<RectTransform>().localScale.z);
     }
 
-    public void fastup()
-    {
-        currentPosition.x += speed *2.5f;
-
-        if(currentPosition.x > endPosition.x) down();
-    }
 }

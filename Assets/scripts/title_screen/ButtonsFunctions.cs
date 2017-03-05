@@ -10,7 +10,6 @@ public class ButtonsFunctions : MonoBehaviour {
 
     [Header("Options Menu")]
     public GameObject optionsMenu;
-    public GameObject selectMenu;
     public bool optionsIsvisible;
     
 
@@ -29,11 +28,12 @@ public class ButtonsFunctions : MonoBehaviour {
 
     public void onclicknew()
     {
-        SceneManager.LoadScene("Prototype");
+        //nueva escena
+        
     }
     public void onclickselect()
     {
-        SceneManager.LoadScene("test_level");
+        //escena de props
     }
     public void onclickoptions()
     {
@@ -63,6 +63,7 @@ public class ButtonsFunctions : MonoBehaviour {
     {
         optionsMenu.SetActive(true);
         optionsIsvisible = true;
+        hideMainMenu();
     }
 
     public void hideOptions()
