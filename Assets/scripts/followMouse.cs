@@ -16,11 +16,15 @@ public class followMouse : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        gameObject.transform.position = mousePosition;
+       /* gameObject.transform.position = mousePosition;
 
         mousePosition = Input.mousePosition;
         mousePosition.z = 10;
-        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);*/
+
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition.z = -Camera.main.transform.position.z;
+        transform.position = Camera.main.ScreenToWorldPoint(mousePosition);
 
     }
 }

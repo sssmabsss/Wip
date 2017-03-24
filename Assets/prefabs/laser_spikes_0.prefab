@@ -11,6 +11,21 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1554324769037276}
   m_IsPrefabParent: 1
+--- !u!1 &1088694450672170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4509711484677300}
+  m_Layer: 0
+  m_Name: start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1554324769037276
 GameObject:
   m_ObjectHideFlags: 0
@@ -22,6 +37,7 @@ GameObject:
   - component: {fileID: 212743544534533988}
   - component: {fileID: 120015721256376504}
   - component: {fileID: 114467223654481842}
+  - component: {fileID: 114888026469172704}
   m_Layer: 0
   m_Name: laser_spikes_0
   m_TagString: Untagged
@@ -36,10 +52,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1554324769037276}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.739182, y: -2.29, z: 0}
+  m_LocalPosition: {x: 75.007126, y: -4.2739434, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4509711484677300}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4509711484677300
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1088694450672170}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.37, y: 0.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 4060415790138820}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114467223654481842
@@ -53,14 +83,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5577d0ffbc1fce469fdaeece6243aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startpoint: {x: 0, y: 0, z: 0}
+  startpoint: {x: 0, y: -1, z: 0}
   endpoint: {x: 0, y: 0, z: 0}
+  start: {fileID: 0}
   lr: {fileID: 120015721256376504}
   linewidth: {x: 0, y: 0}
   dir: {x: -1, y: 0, z: 0}
   laserMask:
     serializedVersion: 2
     m_Bits: 1792
+--- !u!114 &114888026469172704
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1554324769037276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca95dc1ebcd0c7948bf867bf8b53a9c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textures:
+  - {fileID: 2800000, guid: dbc3e959fcb65384d809b21928036bf9, type: 3}
+  - {fileID: 2800000, guid: bfdcd0cef3992f0408d0ce0789a38929, type: 3}
+  - {fileID: 2800000, guid: fe258864e86b8714babb8c04bf6142ef, type: 3}
+  - {fileID: 2800000, guid: 0e5eb147cec8a8b44a945d1a57f83d49, type: 3}
+  changeInterval: 0.2
+  material: {fileID: 2100000, guid: d6c2146176c75b441a8b6e5999b5687b, type: 2}
 --- !u!120 &120015721256376504
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -74,7 +123,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: d6c2146176c75b441a8b6e5999b5687b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,11 +142,11 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 1, y: 0, z: 1}
+  - {x: 0, y: 0.5, z: 0}
+  - {x: -3, y: 0.62, z: 1}
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 1
+    widthMultiplier: 6.41
     widthCurve:
       serializedVersion: 2
       m_Curve:
