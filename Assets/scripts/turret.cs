@@ -37,7 +37,7 @@ public class turret : MonoBehaviour {
         if (distance < shootRange)
             {
 
-
+			GetComponent<SpriteAnimator>().Play(turret_attack)
 
             if (framesCounter >= shootInterval)
             {

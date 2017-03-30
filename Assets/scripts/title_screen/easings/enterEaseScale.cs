@@ -30,17 +30,17 @@ public class enterEaseScale : MonoBehaviour
     {
 
         initValueX = transform.localScale.x;
-        finalValueX = 1.08f;
+        finalValueX = 1.065f;
         currentValueX = initValueX;
 
         initValueY = transform.localScale.y;
-        finalValueY = 1.08f;
+        finalValueY = 1.065f;
         currentValueY = initValueY;
 
         
 
         framesCounter = 0;
-        framesDuration = 35;
+        framesDuration = 45;
         initEase = 0;
 
         blinking = false;
@@ -82,8 +82,8 @@ public class enterEaseScale : MonoBehaviour
                 framesCounter++;
                 if (framesCounter <= framesDuration)
                 {
-                    currentValueX = Easings.ElasticOut(framesCounter, initValueX, finalValueX + 0.2f, framesDuration);
-                    currentValueY = Easings.ElasticOut(framesCounter, initValueY, finalValueY + 0.2f, framesDuration);
+                    currentValueX = Easings.ElasticOut(framesCounter, initValueX, finalValueX + 0.15f, framesDuration);
+                    currentValueY = Easings.ElasticOut(framesCounter, initValueY, finalValueY + 0.15f, framesDuration);
 
                     transform.localScale = new Vector3(currentValueX, currentValueY, 0);
                 }

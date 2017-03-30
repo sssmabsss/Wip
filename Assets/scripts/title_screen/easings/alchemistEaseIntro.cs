@@ -19,7 +19,7 @@ public class alchemistEaseIntro : MonoBehaviour
     {
 
         initValueX = transform.position.x;
-        finalValueX = 15;
+        finalValueX = 22;
         currentValueX = initValueX;
 
         framesCounter = 0;

@@ -1,89 +1,88 @@
 fileFormatVersion: 2
-guid: e016100321db4564babb12be666861eb
-timeCreated: 1490374603
+guid: f02b6eb0db894e44e99591be163ca3c4
+timeCreated: 1490871666
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: plant_atlas_0
-    21300002: plant_atlas_1
-    21300004: plant_atlas_2
-    21300006: plant_atlas_3
-    21300008: plant_atlas_4
-    21300010: plant_atlas_5
-    21300012: plant_atlas_6
-    21300014: plant_atlas_7
-    21300016: plant_atlas_8
-    21300018: plant_atlas_9
-    21300020: plant_atlas_10
-    21300022: plant_atlas_11
-    21300024: plant_atlas_12
-    21300026: plant_atlas_13
-    21300028: plant_atlas_14
-    21300030: plant_atlas_15
-    21300032: plant_atlas_16
-    21300034: plant_atlas_17
-    21300036: plant_atlas_18
-    21300038: plant_atlas_19
-    21300040: plant_atlas_20
-    21300042: plant_atlas_21
-    21300044: plant_atlas_22
-    21300046: plant_atlas_23
-    21300048: plant_atlas_24
-    21300050: plant_atlas_25
-    21300052: plant_atlas_26
-    21300054: plant_atlas_27
-    21300056: plant_atlas_28
-    21300058: plant_atlas_29
-    21300060: plant_atlas_30
-    21300062: plant_atlas_31
-    21300064: plant_atlas_32
-    21300066: plant_atlas_33
-    21300068: plant_atlas_34
-    21300070: plant_atlas_35
-    21300072: plant_atlas_36
-    21300074: plant_atlas_37
-    21300076: plant_atlas_38
-    21300078: plant_atlas_39
-    21300080: plant_atlas_40
-    21300082: plant_atlas_41
-    21300084: plant_atlas_42
-    21300086: plant_atlas_43
-    21300088: plant_atlas_44
-    21300090: plant_atlas_45
-    21300092: plant_atlas_46
-    21300094: plant_atlas_47
-    21300096: plant_atlas_48
-    21300098: plant_atlas_49
-    21300100: plant_atlas_50
-    21300102: plant_atlas_51
-    21300104: plant_atlas_52
-    21300106: plant_atlas_53
-    21300108: plant_atlas_54
-    21300110: plant_atlas_55
-    21300112: plant_atlas_56
-    21300114: plant_atlas_57
-    21300116: plant_atlas_58
-    21300118: plant_atlas_59
-    21300120: plant_atlas_60
-    21300122: plant_atlas_61
-    21300124: plant_atlas_62
-    21300126: plant_atlas_63
-    21300128: plant_atlas_64
-    21300130: plant_atlas_65
-    21300132: plant_atlas_66
-    21300134: plant_atlas_67
-    21300136: plant_atlas_68
-    21300138: plant_atlas_69
-    21300140: plant_atlas_70
-    21300142: plant_atlas_71
-    21300144: plant_atlas_72
-    21300146: plant_atlas_73
-    21300148: plant_atlas_74
-    21300150: plant_atlas_75
-    21300152: plant_atlas_76
-    21300154: plant_atlas_77
-    21300156: plant_atlas_78
-    21300158: plant_atlas_79
+    21300000: atlas_plant_idle_0
+    21300002: atlas_plant_idle_1
+    21300004: atlas_plant_idle_2
+    21300006: atlas_plant_idle_3
+    21300008: atlas_plant_idle_4
+    21300010: atlas_plant_idle_5
+    21300012: atlas_plant_idle_6
+    21300014: atlas_plant_idle_7
+    21300016: atlas_plant_idle_8
+    21300018: atlas_plant_idle_9
+    21300020: atlas_plant_idle_10
+    21300022: atlas_plant_idle_11
+    21300024: atlas_plant_idle_12
+    21300026: atlas_plant_idle_13
+    21300028: atlas_plant_idle_14
+    21300030: atlas_plant_idle_15
+    21300032: atlas_plant_idle_16
+    21300034: atlas_plant_idle_17
+    21300036: atlas_plant_idle_18
+    21300038: atlas_plant_idle_19
+    21300040: atlas_plant_idle_20
+    21300042: atlas_plant_idle_21
+    21300044: atlas_plant_idle_22
+    21300046: atlas_plant_idle_23
+    21300048: atlas_plant_idle_24
+    21300050: atlas_plant_idle_25
+    21300052: atlas_plant_idle_26
+    21300054: atlas_plant_idle_27
+    21300056: atlas_plant_idle_28
+    21300058: atlas_plant_idle_29
+    21300060: atlas_plant_idle_30
+    21300062: atlas_plant_idle_31
+    21300064: atlas_plant_idle_32
+    21300066: atlas_plant_idle_33
+    21300068: atlas_plant_idle_34
+    21300070: atlas_plant_idle_35
+    21300072: atlas_plant_idle_36
+    21300074: atlas_plant_idle_37
+    21300076: atlas_plant_idle_38
+    21300078: atlas_plant_idle_39
+    21300080: atlas_plant_idle_40
+    21300082: atlas_plant_idle_41
+    21300084: atlas_plant_idle_42
+    21300086: atlas_plant_idle_43
+    21300088: atlas_plant_idle_44
+    21300090: atlas_plant_idle_45
+    21300092: atlas_plant_idle_46
+    21300094: atlas_plant_idle_47
+    21300096: atlas_plant_idle_48
+    21300098: atlas_plant_idle_49
+    21300100: atlas_plant_idle_50
+    21300102: atlas_plant_idle_51
+    21300104: atlas_plant_idle_52
+    21300106: atlas_plant_idle_53
+    21300108: atlas_plant_idle_54
+    21300110: atlas_plant_idle_55
+    21300112: atlas_plant_idle_56
+    21300114: atlas_plant_idle_57
+    21300116: atlas_plant_idle_58
+    21300118: atlas_plant_idle_59
+    21300120: atlas_plant_idle_60
+    21300122: atlas_plant_idle_61
+    21300124: atlas_plant_idle_62
+    21300126: atlas_plant_idle_63
+    21300128: atlas_plant_idle_64
+    21300130: atlas_plant_idle_65
+    21300132: atlas_plant_idle_66
+    21300134: atlas_plant_idle_67
+    21300136: atlas_plant_idle_68
+    21300138: atlas_plant_idle_69
+    21300140: atlas_plant_idle_70
+    21300142: atlas_plant_idle_71
+    21300144: atlas_plant_idle_72
+    21300146: atlas_plant_idle_73
+    21300148: atlas_plant_idle_74
+    21300150: atlas_plant_idle_75
+    21300152: atlas_plant_idle_76
+    21300154: atlas_plant_idle_77
+    21300156: atlas_plant_idle_78
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -120,7 +119,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 128
+  spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -150,7 +149,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: plant_atlas_0
+      name: atlas_plant_idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -158,12 +157,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_1
+      name: atlas_plant_idle_1
       rect:
         serializedVersion: 2
         x: 256
@@ -171,12 +170,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_2
+      name: atlas_plant_idle_2
       rect:
         serializedVersion: 2
         x: 512
@@ -184,12 +183,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_3
+      name: atlas_plant_idle_3
       rect:
         serializedVersion: 2
         x: 768
@@ -197,12 +196,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_4
+      name: atlas_plant_idle_4
       rect:
         serializedVersion: 2
         x: 1024
@@ -210,12 +209,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_5
+      name: atlas_plant_idle_5
       rect:
         serializedVersion: 2
         x: 1280
@@ -223,12 +222,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_6
+      name: atlas_plant_idle_6
       rect:
         serializedVersion: 2
         x: 1536
@@ -236,12 +235,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_7
+      name: atlas_plant_idle_7
       rect:
         serializedVersion: 2
         x: 1792
@@ -249,12 +248,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_8
+      name: atlas_plant_idle_8
       rect:
         serializedVersion: 2
         x: 2048
@@ -262,12 +261,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_9
+      name: atlas_plant_idle_9
       rect:
         serializedVersion: 2
         x: 2304
@@ -275,12 +274,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_10
+      name: atlas_plant_idle_10
       rect:
         serializedVersion: 2
         x: 2560
@@ -288,12 +287,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_11
+      name: atlas_plant_idle_11
       rect:
         serializedVersion: 2
         x: 2816
@@ -301,12 +300,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_12
+      name: atlas_plant_idle_12
       rect:
         serializedVersion: 2
         x: 3072
@@ -314,12 +313,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_13
+      name: atlas_plant_idle_13
       rect:
         serializedVersion: 2
         x: 3328
@@ -327,12 +326,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_14
+      name: atlas_plant_idle_14
       rect:
         serializedVersion: 2
         x: 3584
@@ -340,12 +339,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_15
+      name: atlas_plant_idle_15
       rect:
         serializedVersion: 2
         x: 3840
@@ -353,12 +352,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_16
+      name: atlas_plant_idle_16
       rect:
         serializedVersion: 2
         x: 0
@@ -366,12 +365,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_17
+      name: atlas_plant_idle_17
       rect:
         serializedVersion: 2
         x: 256
@@ -379,12 +378,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_18
+      name: atlas_plant_idle_18
       rect:
         serializedVersion: 2
         x: 512
@@ -392,12 +391,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_19
+      name: atlas_plant_idle_19
       rect:
         serializedVersion: 2
         x: 768
@@ -405,12 +404,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_20
+      name: atlas_plant_idle_20
       rect:
         serializedVersion: 2
         x: 1024
@@ -418,12 +417,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_21
+      name: atlas_plant_idle_21
       rect:
         serializedVersion: 2
         x: 1280
@@ -431,12 +430,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_22
+      name: atlas_plant_idle_22
       rect:
         serializedVersion: 2
         x: 1536
@@ -444,12 +443,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_23
+      name: atlas_plant_idle_23
       rect:
         serializedVersion: 2
         x: 1792
@@ -457,12 +456,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_24
+      name: atlas_plant_idle_24
       rect:
         serializedVersion: 2
         x: 2048
@@ -470,12 +469,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_25
+      name: atlas_plant_idle_25
       rect:
         serializedVersion: 2
         x: 2304
@@ -483,12 +482,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_26
+      name: atlas_plant_idle_26
       rect:
         serializedVersion: 2
         x: 2560
@@ -496,12 +495,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_27
+      name: atlas_plant_idle_27
       rect:
         serializedVersion: 2
         x: 2816
@@ -509,12 +508,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_28
+      name: atlas_plant_idle_28
       rect:
         serializedVersion: 2
         x: 3072
@@ -522,12 +521,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_29
+      name: atlas_plant_idle_29
       rect:
         serializedVersion: 2
         x: 3328
@@ -535,12 +534,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_30
+      name: atlas_plant_idle_30
       rect:
         serializedVersion: 2
         x: 3584
@@ -548,12 +547,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_31
+      name: atlas_plant_idle_31
       rect:
         serializedVersion: 2
         x: 3840
@@ -561,12 +560,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_32
+      name: atlas_plant_idle_32
       rect:
         serializedVersion: 2
         x: 0
@@ -574,12 +573,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_33
+      name: atlas_plant_idle_33
       rect:
         serializedVersion: 2
         x: 256
@@ -587,12 +586,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_34
+      name: atlas_plant_idle_34
       rect:
         serializedVersion: 2
         x: 512
@@ -600,12 +599,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_35
+      name: atlas_plant_idle_35
       rect:
         serializedVersion: 2
         x: 768
@@ -613,12 +612,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_36
+      name: atlas_plant_idle_36
       rect:
         serializedVersion: 2
         x: 1024
@@ -626,12 +625,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_37
+      name: atlas_plant_idle_37
       rect:
         serializedVersion: 2
         x: 1280
@@ -639,12 +638,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_38
+      name: atlas_plant_idle_38
       rect:
         serializedVersion: 2
         x: 1536
@@ -652,12 +651,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_39
+      name: atlas_plant_idle_39
       rect:
         serializedVersion: 2
         x: 1792
@@ -665,12 +664,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_40
+      name: atlas_plant_idle_40
       rect:
         serializedVersion: 2
         x: 2048
@@ -678,12 +677,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_41
+      name: atlas_plant_idle_41
       rect:
         serializedVersion: 2
         x: 2304
@@ -691,12 +690,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_42
+      name: atlas_plant_idle_42
       rect:
         serializedVersion: 2
         x: 2560
@@ -704,12 +703,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_43
+      name: atlas_plant_idle_43
       rect:
         serializedVersion: 2
         x: 2816
@@ -717,12 +716,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_44
+      name: atlas_plant_idle_44
       rect:
         serializedVersion: 2
         x: 3072
@@ -730,12 +729,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_45
+      name: atlas_plant_idle_45
       rect:
         serializedVersion: 2
         x: 3328
@@ -743,12 +742,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_46
+      name: atlas_plant_idle_46
       rect:
         serializedVersion: 2
         x: 3584
@@ -756,12 +755,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_47
+      name: atlas_plant_idle_47
       rect:
         serializedVersion: 2
         x: 3840
@@ -769,12 +768,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_48
+      name: atlas_plant_idle_48
       rect:
         serializedVersion: 2
         x: 0
@@ -782,12 +781,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_49
+      name: atlas_plant_idle_49
       rect:
         serializedVersion: 2
         x: 256
@@ -795,12 +794,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_50
+      name: atlas_plant_idle_50
       rect:
         serializedVersion: 2
         x: 512
@@ -808,12 +807,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_51
+      name: atlas_plant_idle_51
       rect:
         serializedVersion: 2
         x: 768
@@ -821,12 +820,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_52
+      name: atlas_plant_idle_52
       rect:
         serializedVersion: 2
         x: 1024
@@ -834,12 +833,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_53
+      name: atlas_plant_idle_53
       rect:
         serializedVersion: 2
         x: 1280
@@ -847,12 +846,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_54
+      name: atlas_plant_idle_54
       rect:
         serializedVersion: 2
         x: 1536
@@ -860,12 +859,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_55
+      name: atlas_plant_idle_55
       rect:
         serializedVersion: 2
         x: 1792
@@ -873,12 +872,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_56
+      name: atlas_plant_idle_56
       rect:
         serializedVersion: 2
         x: 2048
@@ -886,12 +885,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_57
+      name: atlas_plant_idle_57
       rect:
         serializedVersion: 2
         x: 2304
@@ -899,12 +898,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_58
+      name: atlas_plant_idle_58
       rect:
         serializedVersion: 2
         x: 2560
@@ -912,12 +911,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_59
+      name: atlas_plant_idle_59
       rect:
         serializedVersion: 2
         x: 2816
@@ -925,12 +924,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_60
+      name: atlas_plant_idle_60
       rect:
         serializedVersion: 2
         x: 3072
@@ -938,12 +937,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_61
+      name: atlas_plant_idle_61
       rect:
         serializedVersion: 2
         x: 3328
@@ -951,12 +950,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_62
+      name: atlas_plant_idle_62
       rect:
         serializedVersion: 2
         x: 3584
@@ -964,12 +963,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_63
+      name: atlas_plant_idle_63
       rect:
         serializedVersion: 2
         x: 3840
@@ -977,12 +976,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_64
+      name: atlas_plant_idle_64
       rect:
         serializedVersion: 2
         x: 0
@@ -990,12 +989,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_65
+      name: atlas_plant_idle_65
       rect:
         serializedVersion: 2
         x: 256
@@ -1003,12 +1002,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_66
+      name: atlas_plant_idle_66
       rect:
         serializedVersion: 2
         x: 512
@@ -1016,12 +1015,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_67
+      name: atlas_plant_idle_67
       rect:
         serializedVersion: 2
         x: 768
@@ -1029,12 +1028,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_68
+      name: atlas_plant_idle_68
       rect:
         serializedVersion: 2
         x: 1024
@@ -1042,12 +1041,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_69
+      name: atlas_plant_idle_69
       rect:
         serializedVersion: 2
         x: 1280
@@ -1055,12 +1054,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_70
+      name: atlas_plant_idle_70
       rect:
         serializedVersion: 2
         x: 1536
@@ -1068,12 +1067,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_71
+      name: atlas_plant_idle_71
       rect:
         serializedVersion: 2
         x: 1792
@@ -1081,12 +1080,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_72
+      name: atlas_plant_idle_72
       rect:
         serializedVersion: 2
         x: 2048
@@ -1094,12 +1093,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_73
+      name: atlas_plant_idle_73
       rect:
         serializedVersion: 2
         x: 2304
@@ -1107,12 +1106,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_74
+      name: atlas_plant_idle_74
       rect:
         serializedVersion: 2
         x: 2560
@@ -1120,12 +1119,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_75
+      name: atlas_plant_idle_75
       rect:
         serializedVersion: 2
         x: 2816
@@ -1133,12 +1132,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_76
+      name: atlas_plant_idle_76
       rect:
         serializedVersion: 2
         x: 3072
@@ -1146,12 +1145,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_77
+      name: atlas_plant_idle_77
       rect:
         serializedVersion: 2
         x: 3328
@@ -1159,12 +1158,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: plant_atlas_78
+      name: atlas_plant_idle_78
       rect:
         serializedVersion: 2
         x: 3584
@@ -1172,20 +1171,7 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: plant_atlas_79
-      rect:
-        serializedVersion: 2
-        x: 3840
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
