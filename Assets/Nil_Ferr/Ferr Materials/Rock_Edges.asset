@@ -1,0 +1,163 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cfe511f5ae84c24e82fbf88db7e24ae, type: 3}
+  m_Name: Rock_Edges
+  m_EditorClassIdentifier: 
+  _fillMaterial: {fileID: 2100000, guid: f12486278d4b1e54588662f5d5e2e3c2, type: 2}
+  _edgeMaterial: {fileID: 2100000, guid: d14ba790770ded14ab8e5467ebc44d59, type: 2}
+  _descriptors:
+  - applyTo: 0
+    zOffset: -0.01
+    yOffset: 0
+    leftCap:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0.0625
+      height: 0.19335938
+    innerLeftCap:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    rightCap:
+      serializedVersion: 2
+      x: 0.23572266
+      y: 0
+      width: 0.051425785
+      height: 0.19335938
+    innerRightCap:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    body:
+    - serializedVersion: 2
+      x: 0.064453125
+      y: 0
+      width: 0.17089844
+      height: 0.19335938
+    - serializedVersion: 2
+      x: 0.29423827
+      y: 0
+      width: 0.16839844
+      height: 0.19335938
+    - serializedVersion: 2
+      x: 0.47526366
+      y: 0
+      width: 0.16839844
+      height: 0.19335938
+    capOffset: 0
+  - applyTo: 1
+    zOffset: 0
+    yOffset: 0.77
+    leftCap:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    innerLeftCap:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    rightCap:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    innerRightCap:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    body:
+    - serializedVersion: 2
+      x: 0.06347656
+      y: 0.234375
+      width: 0.16992188
+      height: 0.16601562
+    capOffset: 0
+  - applyTo: 2
+    zOffset: 0
+    yOffset: 0.62
+    leftCap:
+      serializedVersion: 2
+      x: 0.06347656
+      y: 0
+      width: 0
+      height: 0
+    innerLeftCap:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    rightCap:
+      serializedVersion: 2
+      x: 0.23339844
+      y: 0
+      width: 0
+      height: 0
+    innerRightCap:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    body:
+    - serializedVersion: 2
+      x: 0.06347656
+      y: 0.234375
+      width: 0.16992188
+      height: 0.16601562
+    capOffset: 0
+  - applyTo: 0
+    zOffset: 0
+    yOffset: 0
+    leftCap:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    innerLeftCap:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    rightCap:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    innerRightCap:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    body:
+    - serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0.048828125
+      height: 0.048828125
+    capOffset: 0
+  isPixel: 0
