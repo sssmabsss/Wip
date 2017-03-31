@@ -34,6 +34,9 @@ public class shoot : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
+
+        DecalPainter.Instance.Paint;
+
         if (other.tag == "Player")
         {
             other.gameObject.GetComponent<plyer>().takingdamage();
