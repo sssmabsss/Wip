@@ -37,6 +37,7 @@ public class plyer : MonoBehaviour
     public Transform graphicsTransform;
     public GameObject graphics;
     public Color playercolor;
+    public CameraController CC;
   //  public GameObject bar;
 
     [Header("forces")]
@@ -143,7 +144,7 @@ public class plyer : MonoBehaviour
             //for aiming with the mouse
 
             mousePosition = Input.mousePosition;
-            mousePosition.z = 10;
+            mousePosition.z = CC.Zdistance;
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
             mousePosition2D.x = mousePosition.x;

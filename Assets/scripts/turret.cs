@@ -19,7 +19,7 @@ public class turret : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        GetComponent<SpriteAnimator>().AddCustomEvent("turret_attack", 14).AddListener(StepFrame);
+        //GetComponent<SpriteAnimator>().AddCustomEvent("turret_attack", 14).AddListener(StepFrame);
         for (int i = 0; i < bullets.Length; i++)
         {
             bullets[i].SetActive(false);
@@ -38,11 +38,11 @@ public class turret : MonoBehaviour {
 
         if (distance < shootRange)
         {
-            GetComponent<SpriteAnimator>().Play("turret_attack");          
+            GetComponent<SpriteAnimator>().Play("Plant_attack_left");          
         }
-        else GetComponent<SpriteAnimator>().Play("turret_idle");
+        else GetComponent<SpriteAnimator>().Play("Plant_idle_left");
 
-        
+
 
         if (framesCounter >= 5) restart();
 
