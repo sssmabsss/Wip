@@ -41,7 +41,7 @@ public class shoot : MonoBehaviour {
     {
 
 
-        decall.Show(other.gameObject.transform.position, Color.red);
+      //  decall.Show(other.gameObject.transform.position, Color.red);
 
 
         if (other.tag == "Player")
