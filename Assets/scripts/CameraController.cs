@@ -10,6 +10,7 @@ public class CameraController : MonoBehaviour {
     public float lookSmoothTimeX;
     public float verticalSmoothTime;
     public Vector2 focusAreaSize;
+    public float Zdistance;
 
     FocusArea focusArea;
 
@@ -55,7 +56,7 @@ public class CameraController : MonoBehaviour {
 
         focusPosition.y = Mathf.SmoothDamp(transform.position.y, focusPosition.y, ref smoothVelocityY, verticalSmoothTime);
         focusPosition += Vector2.right * currentLookAheadX;
-        transform.position = (Vector3)focusPosition + Vector3.forward * -10;
+        transform.position = (Vector3)focusPosition + Vector3.forward * -Zdistance;
     }
 
     void OnDrawGizmos()

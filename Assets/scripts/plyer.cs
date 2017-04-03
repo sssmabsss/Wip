@@ -36,6 +36,7 @@ public class plyer : MonoBehaviour
     public bool facingRight;
     public Transform graphicsTransform;
     public GameObject graphics;
+    public Color playercolor;
   //  public GameObject bar;
 
     [Header("forces")]
@@ -268,7 +269,7 @@ public class plyer : MonoBehaviour
                     framesCounter = 0;
                 }
             }
-            else gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            else gameObject.GetComponent<SpriteRenderer>().color = playercolor;
     }
 
     void OnDrawGizmos()
