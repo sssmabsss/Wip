@@ -140,6 +140,9 @@ public class plyer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKeyDown("f11")) restardCheckpoint();
+
             //for aiming with the mouse
 
             mousePosition = Input.mousePosition;

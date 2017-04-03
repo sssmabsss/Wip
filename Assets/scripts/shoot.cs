@@ -9,15 +9,11 @@ public class shoot : MonoBehaviour {
 
     public float speed;
 
-    public Decall decall;
-    public GameObject go;
-    
-
 
     void Start ()
     {
         
-        decall = go.GetComponent<Decall>();
+
 
 	}
 	
@@ -39,9 +35,6 @@ public class shoot : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-
-
-      //  decall.Show(other.gameObject.transform.position, Color.red);
 
 
         if (other.tag == "Player")
