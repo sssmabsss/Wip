@@ -6,21 +6,18 @@ public class followMouse : MonoBehaviour {
 
 
     public Vector3 mousePosition;
+    public bool visible;
 
 	// Use this for initialization
 	void Start () {
 
-		
-	}
+        visible = true;
+    }
 	
 	// Update is called once per frame
 	void Update () {
 
-       /* gameObject.transform.position = mousePosition;
-
-        mousePosition = Input.mousePosition;
-        mousePosition.z = 10;
-        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);*/
+        Cursor.visible = visible;
 
         Vector3 mousePosition = Input.mousePosition;
         mousePosition.z = -Camera.main.transform.position.z;

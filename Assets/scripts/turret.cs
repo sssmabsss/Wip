@@ -15,11 +15,16 @@ public class turret : MonoBehaviour {
     public float distance;
     public int bulletdistance;
     public float shootRange;
+    public bool isshooting;
+
+    private SpriteAnimator sp;
 
     // Use this for initialization
     void Start ()
     {
-        //GetComponent<SpriteAnimator>().AddCustomEvent("turret_attack", 14).AddListener(StepFrame);
+        sp = GetComponent<SpriteAnimator>();
+
+       sp.AddCustomEvent("Plant_attack_left", 6).AddListener(ShootFrame);
         for (int i = 0; i < bullets.Length; i++)
         {
             bullets[i].SetActive(false);
@@ -38,13 +43,23 @@ public class turret : MonoBehaviour {
 
         if (distance < shootRange)
         {
-            GetComponent<SpriteAnimator>().Play("Plant_attack_left");          
+            isshooting = true;
         }
-        else GetComponent<SpriteAnimator>().Play("Plant_idle_left");
+        else
+        {
+            isshooting = false;
+        }
 
 
+        if (isshooting)
+        {
+            sp.Play("Plant_attack_left", true);
 
-        if (framesCounter >= 5) restart();
+        }
+        else
+        {
+            sp.Play("Plant_idle_left");
+        }
 
     }
 
@@ -61,7 +76,7 @@ public class turret : MonoBehaviour {
         framesCounter = 0;
     }
 
-    public  void StepFrame(BaseAnimator caller)
+    public  void ShootFrame(BaseAnimator caller)
     {
         Shot();
     }
