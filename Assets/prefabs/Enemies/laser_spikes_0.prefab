@@ -92,6 +92,9 @@ MonoBehaviour:
   laserMask:
     serializedVersion: 2
     m_Bits: 1792
+  distance: 0
+  m: {fileID: 0}
+  tilling: 0
 --- !u!114 &114888026469172704
 MonoBehaviour:
   m_ObjectHideFlags: 1

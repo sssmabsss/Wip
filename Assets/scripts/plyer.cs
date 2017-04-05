@@ -69,11 +69,6 @@ public class plyer : MonoBehaviour
     public float framesCounter;
     public float framesCounterhit;
 
-    [Header("Checkpoint")]
-    public bool istouchingcheckpoint;
-    public Vector2 actualchekpoint;
-    public Vector2 lastcheckpoint;
-
     [Header("particles")]
     public GameObject lighting_particle;
 
@@ -92,12 +87,10 @@ public class plyer : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         facingRight = true;
-        lastcheckpoint = gameObject.transform.position;
         life = 3;
         invencibility = false;
         GodMode = false;
         IsPaused = false;
-        istouchingcheckpoint = false;
         pause.SetActive(false);
     }
 
@@ -113,11 +106,6 @@ public class plyer : MonoBehaviour
         if (hitcolliderGround != null)
         {
             isGrounded = true;
-            if (hitcolliderGround.gameObject.tag == "checkpoint")
-            {
-                istouchingcheckpoint = true;
-                writecheckpoint(hitcolliderGround.gameObject.transform.position);
-            }
         }
         else 
         {
@@ -273,10 +261,6 @@ public class plyer : MonoBehaviour
             if(facingRight && move < 0) flip();
             else if(!facingRight && move > 0) flip();
 
-            //restart logic
-
-            if(life <= 0) restardCheckpoint();
-
             //invencibility logic
 
             if(invencibility)
@@ -304,7 +288,6 @@ public class plyer : MonoBehaviour
     void MovementUpdate()
     {
 
-
         move = Input.GetAxis("Horizontal");
         if (GodMode) movevertical = Input.GetAxis("Vertical");
         if (move != 0) Moving = true;
@@ -330,7 +313,6 @@ public class plyer : MonoBehaviour
 
         facingRight = !facingRight;
         TouchingObject = null;
-       
     }
 
     void coger()
@@ -357,7 +339,6 @@ public class plyer : MonoBehaviour
 
     void aimObject()
     {
-
 
         aimhit = Physics2D.Linecast(gameObject.transform.position + dir, mousePosition2D, raymask);
 
@@ -445,35 +426,14 @@ public class plyer : MonoBehaviour
     {
         if (!invencibility)
         {
-            life -= 1;
-            if (life > 0) invencibility = true;
+
+            transform.position = CheckPoint.GetActiveCheckPointPosition();
+            /* life -= 1;
+             if (life > 0) invencibility = true;*/
         }
     }
 
-    public Vector2 writecheckpoint(Vector2 checkposition)
-    {
-
-        actualchekpoint = checkposition;
-        return actualchekpoint;
-    }
-
-    public void restardCheckpoint()
-    {
-        gameObject.transform.position = lastcheckpoint;
-        life = 3;
-    }
-
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "platform")
-        {
-            transform.parent = null;
-            riding = false;
-        }
-    }
-
-    public void OnPause()
+     public void OnPause()
     {
 
         if (IsPaused)

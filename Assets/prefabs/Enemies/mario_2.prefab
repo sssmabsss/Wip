@@ -109,6 +109,20 @@ MonoBehaviour:
   initialspeed: 0
   isvertical: 0
   ishorizontal: 1
+  groundChecker: {fileID: 0}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  groundSize: {x: 0, y: 0}
+  wallChecker: {fileID: 0}
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 0
+  wallSize: {x: 0, y: 0}
+  isGrounded: 0
+  isTouchingWall: 0
+  facingRight: 0
+  graphicsTransform: {fileID: 0}
 --- !u!212 &212199469610138492
 SpriteRenderer:
   m_ObjectHideFlags: 1

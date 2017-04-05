@@ -389,6 +389,8 @@ MonoBehaviour:
   distance: 0
   bulletdistance: -15
   shootRange: 8
+  isshooting: 0
+  shoot: {fileID: 0}
 --- !u!114 &114594416574195964
 MonoBehaviour:
   m_ObjectHideFlags: 1

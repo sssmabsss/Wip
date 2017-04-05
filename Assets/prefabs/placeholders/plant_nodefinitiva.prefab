@@ -485,8 +485,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
-  decall: {fileID: 0}
-  go: {fileID: 0}
 --- !u!114 &114089990722058742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -546,6 +544,8 @@ MonoBehaviour:
   distance: 0
   bulletdistance: 5
   shootRange: 4
+  isshooting: 0
+  shoot: {fileID: 0}
 --- !u!114 &114259646791555658
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -558,8 +558,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
-  decall: {fileID: 0}
-  go: {fileID: 0}
 --- !u!114 &114326618968942378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -572,8 +570,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
-  decall: {fileID: 0}
-  go: {fileID: 0}
 --- !u!114 &114525200943657916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -586,8 +582,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
-  decall: {fileID: 0}
-  go: {fileID: 0}
 --- !u!114 &114768232337774608
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -600,8 +594,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
-  decall: {fileID: 0}
-  go: {fileID: 0}
 --- !u!114 &114825151700344178
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -614,8 +606,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
-  decall: {fileID: 0}
-  go: {fileID: 0}
 --- !u!212 &212298679597896194
 SpriteRenderer:
   m_ObjectHideFlags: 1
