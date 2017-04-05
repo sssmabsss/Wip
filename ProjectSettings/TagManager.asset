@@ -11,6 +11,7 @@ TagManager:
   - Danger
   - Land
   - spikes
+  - checkPoint
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Material
   - Danger
   - spikes
-  - 
+  - checkPoint
   - 
   - 
   - 

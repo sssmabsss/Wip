@@ -85,6 +85,7 @@ public class patruller : MonoBehaviour {
 
         if (isTouchingWall)
         {
+            flip();
             speed *= -1;
         }
     }

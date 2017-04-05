@@ -70,7 +70,9 @@ public class plyer : MonoBehaviour
     public float framesCounterhit;
 
     [Header("Checkpoint")]
-    public Vector3 lastcheckpoint;
+    public bool istouchingcheckpoint;
+    public Vector2 actualchekpoint;
+    public Vector2 lastcheckpoint;
 
     [Header("particles")]
     public GameObject lighting_particle;
@@ -78,6 +80,10 @@ public class plyer : MonoBehaviour
     [Header("Ui")]
     public castbar castbar;
     public GameObject pause;
+
+    [Header("Sounds")]
+    public AudioSource absorbsound;
+    public AudioSource pausaSound;
 
 
     // Use this for initialization
@@ -91,6 +97,7 @@ public class plyer : MonoBehaviour
         invencibility = false;
         GodMode = false;
         IsPaused = false;
+        istouchingcheckpoint = false;
         pause.SetActive(false);
     }
 
@@ -105,7 +112,12 @@ public class plyer : MonoBehaviour
 
         if (hitcolliderGround != null)
         {
-            isGrounded = true; 
+            isGrounded = true;
+            if (hitcolliderGround.gameObject.tag == "checkpoint")
+            {
+                istouchingcheckpoint = true;
+                writecheckpoint(hitcolliderGround.gameObject.transform.position);
+            }
         }
         else 
         {
@@ -162,9 +174,13 @@ public class plyer : MonoBehaviour
             }
 
 
-            //debugin linecast:
+        //debugin linecast:
 
-            if(Input.GetMouseButton(1)) Debug.DrawLine(gameObject.transform.position + dir, mousePosition, Color.yellow);
+        if (Input.GetMouseButton(1))
+        {
+            Debug.DrawLine(gameObject.transform.position + dir, mousePosition, Color.yellow);
+            absorbsound.Play();
+        }
 
             if(Input.GetMouseButton(0)) Debug.DrawLine(mousePosition, gameObject.transform.position + dir, Color.green);
 
@@ -173,15 +189,15 @@ public class plyer : MonoBehaviour
             if(Input.GetMouseButton(1))
             {
                 aimObject();
-                
 
             }
             else if(Input.GetMouseButtonUp(1))
             {
                 framesCounter = 0;
-            castbar.framesCounter = 0;
+                castbar.framesCounter = 0;
+                absorbsound.Stop();
 
-            }
+        }
 
             if(Input.GetMouseButton(0))
             {
@@ -195,7 +211,11 @@ public class plyer : MonoBehaviour
 
         //pause logic
 
-        if (Input.GetKeyDown("p")) IsPaused = !IsPaused;
+        if (Input.GetKeyDown("p"))
+        {
+            IsPaused = !IsPaused;
+            pausaSound.Play();
+        }
 
         OnPause();
 
@@ -347,6 +367,7 @@ public class plyer : MonoBehaviour
             rayhit = aimhit.transform.gameObject;
             print("he tocado algo");
             framesCounter += Time.deltaTime;
+
         }
         else
         {
@@ -358,6 +379,7 @@ public class plyer : MonoBehaviour
         {
 
             castbar.Charge_Bar(getcoldown);
+            
 
             if (framesCounter >= getcoldown)
             {
@@ -428,23 +450,19 @@ public class plyer : MonoBehaviour
         }
     }
 
+    public Vector2 writecheckpoint(Vector2 checkposition)
+    {
+
+        actualchekpoint = checkposition;
+        return actualchekpoint;
+    }
+
     public void restardCheckpoint()
     {
         gameObject.transform.position = lastcheckpoint;
         life = 3;
     }
 
-
-    void OnTriggerEnter(Collider other)
-    {
-
-        if (other.gameObject.tag == "platform")
-        {
-            transform.parent = other.transform;
-            riding = true;
-
-        }
-    }
 
     void OnTriggerExit(Collider other)
     {

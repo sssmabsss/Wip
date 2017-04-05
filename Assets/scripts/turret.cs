@@ -16,6 +16,7 @@ public class turret : MonoBehaviour {
     public int bulletdistance;
     public float shootRange;
     public bool isshooting;
+    public AudioSource shoot;
 
     private SpriteAnimator sp;
 
@@ -79,6 +80,8 @@ public class turret : MonoBehaviour {
     public  void ShootFrame(BaseAnimator caller)
     {
         Shot();
+        shoot.Play();
+
     }
 
     void Shot()
