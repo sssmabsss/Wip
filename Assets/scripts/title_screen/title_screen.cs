@@ -49,6 +49,7 @@ public class title_screen : MonoBehaviour
         {
             isVisible = false;
             start.SetActive(false);
+            alchemist.SetActive(false);
             GetComponent<ButtonsFunctions>().showMainMenu();
             GetComponent<ButtonsFunctions>().optionsIsvisible = true;
         }

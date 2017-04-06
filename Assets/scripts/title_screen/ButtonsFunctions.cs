@@ -16,6 +16,9 @@ public class ButtonsFunctions : MonoBehaviour {
     public AudioSource startSound;
     public AudioSource clickSound;
 
+    [Header("Gamma correction")]
+    public float gammaCorrectionValue;
+
 
 
 
@@ -25,11 +28,17 @@ public class ButtonsFunctions : MonoBehaviour {
         hideMainMenu();
         hideOptions();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+        RenderSettings.ambientLight = new Color(gammaCorrectionValue, gammaCorrectionValue, gammaCorrectionValue, 1.0f);
+    }
+    public void Slider(float x)
+    {
+        gammaCorrectionValue = x;
+    }
+
 
     public void onclicknew()
     {
