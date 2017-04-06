@@ -385,7 +385,6 @@ public class plyer : MonoBehaviour
 
             objectToChange = changehit.transform.gameObject;
             framesCounter += Time.deltaTime;
-			print("cambio algo");
 
           //  bar.GetComponent<castbar>().fastup();
 
