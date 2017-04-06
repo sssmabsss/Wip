@@ -12,6 +12,7 @@ TagManager:
   - Land
   - spikes
   - checkPoint
+  - boss
   layers:
   - Default
   - TransparentFX

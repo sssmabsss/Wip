@@ -80,6 +80,8 @@ public class plyer : MonoBehaviour
     public AudioSource absorbsound;
     public AudioSource pausaSound;
 
+    private SpriteAnimator sp;
+
 
     // Use this for initialization
     void Start()
@@ -92,6 +94,7 @@ public class plyer : MonoBehaviour
         GodMode = false;
         IsPaused = false;
         pause.SetActive(false);
+        sp = GetComponent<SpriteAnimator>();
     }
 
     void FixedUpdate()
@@ -177,8 +180,10 @@ public class plyer : MonoBehaviour
             if(Input.GetMouseButton(1))
             {
                 aimObject();
+            if(facingRight) sp.Play("Magic_Right");
+            if(!facingRight) sp.Play("Magic_Left");
 
-            }
+        }
             else if(Input.GetMouseButtonUp(1))
             {
                 framesCounter = 0;
@@ -273,6 +278,12 @@ public class plyer : MonoBehaviour
                 }
             }
             else gameObject.GetComponent<SpriteRenderer>().color = playercolor;
+
+        if(move != 0 && facingRight) sp.Play("Walk_Right", true);
+        else if(move != 0 && !facingRight) sp.Play("Walk_Left", true);
+        else if(move == 0 && facingRight) sp.Play("Idle_Right", true);
+        else if(move == 0 && !facingRight) sp.Play("Idle_Left", true);
+ 
     }
 
     void OnDrawGizmos()

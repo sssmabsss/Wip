@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ac5cc1d91ae910409434bc1e5528488, type: 3}
-  m_Name: player_idle_right
+  m_Name: Idle_Right
   m_EditorClassIdentifier: 
-  animationName: player_idle_right
+  animationName: Idle_Right
   frames:
   - {fileID: 21300000, guid: 04a777d3895007a49b9bdab10cef9f9d, type: 3}
   - {fileID: 21300002, guid: 04a777d3895007a49b9bdab10cef9f9d, type: 3}
@@ -19,5 +19,4 @@ MonoBehaviour:
   - {fileID: 21300006, guid: 04a777d3895007a49b9bdab10cef9f9d, type: 3}
   - {fileID: 21300004, guid: 04a777d3895007a49b9bdab10cef9f9d, type: 3}
   - {fileID: 21300002, guid: 04a777d3895007a49b9bdab10cef9f9d, type: 3}
-  - {fileID: 21300000, guid: 04a777d3895007a49b9bdab10cef9f9d, type: 3}
-  framesDuration: 02000000020000000200000002000000020000000200000002000000
+  framesDuration: 030000000200000002000000020000000200000002000000

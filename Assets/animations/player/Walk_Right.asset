@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ac5cc1d91ae910409434bc1e5528488, type: 3}
-  m_Name: player_walk_right
+  m_Name: Walk_Right
   m_EditorClassIdentifier: 
-  animationName: player_walk_right
+  animationName: Walk_Right
   frames:
   - {fileID: 21300000, guid: 8cc323afd89e972459426172788c0688, type: 3}
   - {fileID: 21300002, guid: 8cc323afd89e972459426172788c0688, type: 3}
@@ -21,4 +21,4 @@ MonoBehaviour:
   - {fileID: 21300010, guid: 8cc323afd89e972459426172788c0688, type: 3}
   - {fileID: 21300012, guid: 8cc323afd89e972459426172788c0688, type: 3}
   - {fileID: 21300014, guid: 8cc323afd89e972459426172788c0688, type: 3}
-  framesDuration: 0100000001000000010000000100000001000000010000000100000001000000
+  framesDuration: 0200000002000000020000000200000002000000020000000200000002000000
