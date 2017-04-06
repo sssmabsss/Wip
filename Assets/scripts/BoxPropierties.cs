@@ -56,7 +56,7 @@ public class BoxPropierties : MonoBehaviour {
 
         Debug.DrawRay(rayposition, Vector2.down, Color.magenta);
 
-        RaycastHit2D groundhit = Physics2D.Raycast(rayposition, Vector2.down, 1, hitmask);
+        RaycastHit2D groundhit = Physics2D.Raycast(rayposition, Vector2.down, 10, hitmask);
 
         if (Vector2.Angle(groundhit.normal, Vector2.up) != 0) normalAngle = Vector2.Angle(groundhit.normal, Vector2.up);
 
@@ -66,8 +66,6 @@ public class BoxPropierties : MonoBehaviour {
 
         angulosZ = transform.rotation.z;
 
-        // assigns the raycast's normal direction to the VisualMesh' up directio. this makes it look 'from the surface'
-        // then use some lerping, to smooth it all out
         transform.up = Vector3.Lerp(transform.up, groundhit.normal, Time.deltaTime * 10);
 
         // this part makes sure the Y rotation is properly preserved from the parent gameObject as well

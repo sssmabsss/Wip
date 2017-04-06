@@ -244,11 +244,9 @@ public class plyer : MonoBehaviour
 
             if(Input.GetKeyDown("space") && isTouchingObject) pushing = !pushing;
 
-
-
             if(pushing)
             {
-                coger();
+                Coger();
             }
             else
             {
@@ -315,8 +313,9 @@ public class plyer : MonoBehaviour
         TouchingObject = null;
     }
 
-    void coger()
+    void Coger()
     {
+
       if(TouchingObject != null)  TouchingObject.GetComponent<BoxPropierties>().rb.velocity = new Vector2(0, forcedown);
 
         if (TouchingObject.GetComponent<BoxPropierties>().spritecolor < 1 && pushing)
