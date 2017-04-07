@@ -283,7 +283,9 @@ public class plyer : MonoBehaviour
         else if(move != 0 && !facingRight) sp.Play("Walk_Left", true);
         else if(move == 0 && facingRight) sp.Play("Idle_Right", true);
         else if(move == 0 && !facingRight) sp.Play("Idle_Left", true);
- 
+        else if(facingRight && !isGrounded) sp.Play("Jump_Right");
+        else if(facingRight && !isGrounded) sp.Play("Jump_Left");
+
     }
 
     void OnDrawGizmos()
