@@ -109,6 +109,7 @@ MonoBehaviour:
   lookSmoothTimeX: 0.4
   verticalSmoothTime: 0.4
   focusAreaSize: {x: 3, y: 5}
+  Zdistance: 20
 --- !u!124 &124709127073120736
 Behaviour:
   m_ObjectHideFlags: 1

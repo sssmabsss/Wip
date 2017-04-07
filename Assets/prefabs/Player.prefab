@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 50020706061058970}
   - component: {fileID: 114409253102865950}
   - component: {fileID: 61499773681426690}
-  - component: {fileID: 61026132907509356}
+  - component: {fileID: 114547768066810042}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -111,7 +111,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1180817094385228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.55, y: 0, z: 0}
+  m_LocalPosition: {x: 0.19, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4686233916267154}
@@ -124,7 +124,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1909337876362362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -0.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4686233916267154}
@@ -137,8 +137,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1784512696227278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 55, y: 115, z: 0}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalPosition: {x: 61.81, y: 0.56, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4686233916267154}
   m_Father: {fileID: 0}
@@ -180,20 +180,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61026132907509356
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1784512696227278}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
 --- !u!61 &61499773681426690
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -207,7 +193,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7, y: 2.3}
 --- !u!114 &114409253102865950
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -232,13 +218,13 @@ MonoBehaviour:
   groundChecker: {fileID: 4601361443568832}
   groundMask:
     serializedVersion: 2
-    m_Bits: 1536
+    m_Bits: 34304
   groundSize: {x: 0.7, y: 0.5}
   wallChecker: {fileID: 4255185374009014}
   wallMask:
     serializedVersion: 2
     m_Bits: 1536
-  wallSize: {x: 0.4, y: 1.3}
+  wallSize: {x: 1.33, y: 1.3}
   isGrounded: 0
   isTouchingWall: 0
   isTouchingObject: 0
@@ -247,7 +233,7 @@ MonoBehaviour:
   facingRight: 0
   graphicsTransform: {fileID: 4686233916267154}
   graphics: {fileID: 1962166587951284}
-  playercolor: {r: 0, g: 1, b: 0, a: 1}
+  playercolor: {r: 1, g: 1, b: 1, a: 1}
   CC: {fileID: 0}
   weight: 0
   power: 1
@@ -270,10 +256,50 @@ MonoBehaviour:
   invencibilityTime: 3
   framesCounter: 0
   framesCounterhit: 0
-  lastcheckpoint: {x: 0, y: 0, z: 0}
   lighting_particle: {fileID: 0}
   castbar: {fileID: 0}
   pause: {fileID: 0}
+  absorbsound: {fileID: 0}
+  pausaSound: {fileID: 0}
+--- !u!114 &114547768066810042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1784512696227278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79138fdfe9bafa449acc9961a0186e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playOnAwake: 1
+  ignoreTimeScale: 0
+  framesPerSecond: 24
+  startAnimation: Idle_Right
+  animations:
+  - {fileID: 11400000, guid: 3324fbdb989ddb145aa3028f86fc5965, type: 2}
+  - {fileID: 11400000, guid: c7793e4de4eceab4ab0561d67672d62f, type: 2}
+  - {fileID: 11400000, guid: 4a8f14d1e31d1e74db0e60d9522a9f77, type: 2}
+  - {fileID: 11400000, guid: 03f7eb8dc96cddc4281031ccba0f60fd, type: 2}
+  - {fileID: 11400000, guid: 8cf317d23c7915c4693a1b75edd2ce69, type: 2}
+  - {fileID: 11400000, guid: 520a5dd02970c3a44ae62babb3915ecd, type: 2}
+  - {fileID: 11400000, guid: 227b82474ab8e8641a157174c5fd2100, type: 2}
+  - {fileID: 11400000, guid: 3785831f3e0588b4fb20fe1beaffb9bd, type: 2}
+  onFinish:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  onStop:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  onPlay:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!212 &212627682568620992
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -305,7 +331,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 261b7851014a90945abb2a32a8cb3b14, type: 3}
-  m_Color: {r: 0.19999993, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

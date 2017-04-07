@@ -41,13 +41,13 @@ public class LevelLogic : MonoBehaviour
 	{
 		_sceneCountInBuildSettings = SceneManager.sceneCountInBuildSettings;
 
-		_managerScene = _sceneCountInBuildSettings - 1;
+		_managerScene = 0;
 		currentScene = SceneManager.GetActiveScene().buildIndex;
 
-		if (currentScene <= 0) backScene = _managerScene - 1;
+		if (currentScene == 0) backScene = _sceneCountInBuildSettings -1;
 		else backScene = currentScene - 1;
 
-		if (currentScene >= _managerScene - 1) nextScene = 0;
+		if (currentScene >= _sceneCountInBuildSettings - 1) nextScene = 1;
 		else nextScene = currentScene + 1;
 	}
 

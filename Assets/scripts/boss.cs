@@ -10,9 +10,17 @@ public class boss : MonoBehaviour {
     public float framescounter;
 
 
+    public Transform target;
+    public float distance;
+    public float range;
 
-	// Use this for initialization
-	void Start () {
+    public Vector3 position1;
+    public Vector3 position2;
+    public Vector3 position3;
+
+
+    // Use this for initialization
+    void Start () {
 
      life = 0;
      isAttacking = false;
@@ -29,12 +37,14 @@ public class boss : MonoBehaviour {
 
 
     void Update () {
-	
-        if (framescounter >= Timetoattack)
+
+        distance = Vector3.Distance(transform.position, target.transform.position);
+
+        if (range > distance)
         {
-            isAttacking = true;
-            framescounter = 0;
+            transform.position = new Vector2(target.position.x, transform.position.y);
         }
+
         
         	
 	}

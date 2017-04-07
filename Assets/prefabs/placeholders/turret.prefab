@@ -55,7 +55,6 @@ GameObject:
   - component: {fileID: 4914759090618150}
   - component: {fileID: 212419788556364884}
   - component: {fileID: 61783843587364534}
-  - component: {fileID: 114228319492793450}
   m_Layer: 13
   m_Name: turret
   m_TagString: Untagged
@@ -196,7 +195,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1409195213215158}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 29.18, y: -1.49, z: 0}
+  m_LocalPosition: {x: 62, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4202477598366738}
@@ -365,32 +364,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
---- !u!114 &114228319492793450
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1409195213215158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bb91343daebaf647a088e017893a30f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullets:
-  - {fileID: 1461423433815614}
-  - {fileID: 1519801834101546}
-  - {fileID: 1131189355723674}
-  - {fileID: 1655995711592466}
-  framesCounter: 0
-  direction: {x: -1, y: 0, z: 0}
-  shootspeed: {x: 0.1, y: 0}
-  shootInterval: 2
-  target: {fileID: 4664491140241044, guid: 50f9a7915fbd7ab40a686f494ac9cb14, type: 2}
-  distance: 0
-  bulletdistance: -15
-  shootRange: 8
-  isshooting: 0
-  shoot: {fileID: 0}
 --- !u!114 &114594416574195964
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -562,7 +535,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300002, guid: 952fedc835cdefa4dba654a4899fe43b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -12,6 +12,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/title.unity
   - enabled: 1
-    path: Assets/scenes/Ground_Level.unity
-  - enabled: 1
     path: Assets/scenes/test_level.unity
+  - enabled: 1
+    path: Assets/scenes/ending.unity

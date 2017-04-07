@@ -239,8 +239,10 @@ public class plyer : MonoBehaviour
             if(Input.GetKeyDown("up") || Input.GetKeyDown("w"))
             {
                 if(isGrounded)
-                {
-                    rb.velocity = new Vector2(rb.velocity.x, 0);
+            {
+                if (facingRight) sp.Play("Jump_Right");
+                else if (!facingRight) sp.Play("Jump_Left");
+                rb.velocity = new Vector2(rb.velocity.x, 0);
                     rb.AddForce(new Vector2(0, jumpforce), ForceMode2D.Impulse);
                 }
             }
@@ -283,8 +285,6 @@ public class plyer : MonoBehaviour
         else if(move != 0 && !facingRight) sp.Play("Walk_Left", true);
         else if(move == 0 && facingRight) sp.Play("Idle_Right", true);
         else if(move == 0 && !facingRight) sp.Play("Idle_Left", true);
-        else if(facingRight && !isGrounded) sp.Play("Jump_Right");
-        else if(facingRight && !isGrounded) sp.Play("Jump_Left");
 
     }
 
@@ -353,7 +353,9 @@ public class plyer : MonoBehaviour
     {
 
         aimhit = Physics2D.Linecast(gameObject.transform.position + dir, mousePosition2D, raymask);
-
+        sp.Stop();
+        if (facingRight) sp.Play("Magic_Right");
+        if (!facingRight) sp.Play("Magic_Left");
 
         if (aimhit)
         {
