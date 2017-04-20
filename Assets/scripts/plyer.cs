@@ -353,7 +353,7 @@ public class plyer : MonoBehaviour
     {
 
         aimhit = Physics2D.Linecast(gameObject.transform.position + dir, mousePosition2D, raymask);
-        sp.Stop();
+        //sp.Stop();
         if (facingRight) sp.Play("Magic_Right");
         if (!facingRight) sp.Play("Magic_Left");
 
