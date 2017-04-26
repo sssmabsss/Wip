@@ -147,7 +147,7 @@ public class plyer : MonoBehaviour
             //for aiming with the mouse
 
             mousePosition = Input.mousePosition;
-            mousePosition.z = CC.Zdistance;
+            mousePosition.z = 0; //CC.Zdistance;
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
             mousePosition2D.x = mousePosition.x;

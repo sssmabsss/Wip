@@ -107,9 +107,9 @@ public class CameraController : MonoBehaviour {
             {
                 shiftY = targetBounds.max.y - top;
             }
-            // top += shiftY;
+             top += shiftY;
 
-            // bottom += shiftY;
+             bottom += shiftY;
 
             top = targetBounds.max.y;
             bottom = targetBounds.min.y;

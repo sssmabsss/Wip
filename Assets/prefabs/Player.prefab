@@ -111,7 +111,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1180817094385228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.19, y: 0, z: 0}
+  m_LocalPosition: {x: 0.19, y: 0.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4686233916267154}
@@ -137,7 +137,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1784512696227278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 61.81, y: 0.56, z: 0}
+  m_LocalPosition: {x: -15.81, y: -5.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4686233916267154}
@@ -174,7 +174,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2.3
+  m_GravityScale: 3.5
   m_Material: {fileID: 6200000, guid: 6bc40258a639ec447a3c3956b8752575, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -212,7 +212,7 @@ MonoBehaviour:
   speed: 7
   speedwalk: 7
   speedObject: 4
-  jumpforce: 12
+  jumpforce: 17
   riding: 0
   GodMode: 0
   groundChecker: {fileID: 4601361443568832}
@@ -224,7 +224,7 @@ MonoBehaviour:
   wallMask:
     serializedVersion: 2
     m_Bits: 1536
-  wallSize: {x: 1.33, y: 1.3}
+  wallSize: {x: 1.33, y: 1.78}
   isGrounded: 0
   isTouchingWall: 0
   isTouchingObject: 0
